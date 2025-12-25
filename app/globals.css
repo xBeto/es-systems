@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ===== ARCHITECTURAL MINIMALISM DESIGN SYSTEM ===== */
+
+@theme inline {
+  /* Typography - Clean, Geometric, Sans-serif */
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-display: 'Manrope', system-ui, -apple-system, sans-serif;
+
+  /* Core Colors - Stark & Elemental */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+
+  /* Spacing & Layout */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  /* Sharp corners for architectural feel */
+}
+
+:root {
+  /* Architectural Palette: Concrete, Steel, Charcoal, Light */
+  --background: #F5F5F7;
+  /* Off-white / Concrete */
+  --foreground: #121212;
+  /* Deep Charcoal */
+
+  --primary: #121212;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #EBEBEF;
+  /* Light Grey */
+  --secondary-foreground: #121212;
+
+  --muted: #F0F0F2;
+  --muted-foreground: #666666;
+  /* Mid-grey for secondary text */
+
+  --accent: #2A3B4C;
+  /* Deep Slate Blue - Muted & Professional */
+  --accent-foreground: #FFFFFF;
+
+  --card: #FFFFFF;
+  --card-foreground: #121212;
+
+  --border: #E5E5E5;
+  --input: #F0F0F0;
+
+  --ring: #121212;
+
+  --radius: 0px;
+  /* No rounded corners */
+}
+
+/* ===== BASE STYLES ===== */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Lenis usually overrides this, but good fallback */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.02em;
+    /* Tight tracking for modern feel */
+  }
+
+  /* Typography Hierarchy */
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[0.95];
+  }
+
+  h2 {
+    @apply text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1];
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl font-medium tracking-tight;
+  }
+
+  p {
+    @apply leading-relaxed text-muted-foreground;
+  }
+}
+
+/* ===== UTILITIES ===== */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Custom Cursor Helpers (if we add custom cursor later) */
+  .cursor-none {
+    cursor: none;
+  }
+
+  /* Layout Grid Lines */
+  .grid-lines {
+    background-size: 100px 100px;
+    background-image:
+      linear-gradient(to right, var(--border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  }
+
+  .magnetic-btn {
+    @apply relative overflow-hidden transition-all duration-300 ease-out;
+  }
+
+  .magnetic-btn:hover {
+    @apply transform scale-105;
+  }
+}

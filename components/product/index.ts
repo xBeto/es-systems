@@ -1,0 +1,5 @@
+export { ProductHero } from "./product-hero"
+export { ProductHeroImage } from "./product-hero-image"
+export { SpecsList, type SpecItem } from "./specs-list"
+export { ProductDetails } from "./product-details"
+export { ImageGallery, type GalleryImage } from "./image-gallery"
