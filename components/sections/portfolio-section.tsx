@@ -31,7 +31,7 @@ const projects = [
         title: "Penthouse L.",
         category: "Totaalproject",
         location: "Maasmechelen",
-        image: "https://images.unsplash.com/photo-1593005510529-6ba4238e70bc?q=80&w=2670&auto=format&fit=crop",
+        image: "/projects/penthouse-l.png",
         className: "md:col-span-8 aspect-[16/9]"
     }
 ]

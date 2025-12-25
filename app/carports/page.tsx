@@ -12,8 +12,8 @@ const specs = [
 ]
 
 const galleryImages = [
-    { src: "https://images.unsplash.com/photo-1628744877543-983155734898?q=80&w=2670&auto=format&fit=crop", alt: "Carport project 1" },
-    { src: "https://images.unsplash.com/photo-1593005510529-6ba4238e70bc?q=80&w=2670&auto=format&fit=crop", alt: "Carport project 2" },
+    { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2670&auto=format&fit=crop", alt: "Carport project 1" },
+    { src: "https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?q=80&w=987&auto=format&fit=crop", alt: "Carport project 2" },
     { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop", alt: "Carport project 3" },
 ]
 
@@ -27,7 +27,7 @@ export default function CarportsPage() {
             />
 
             <ProductHeroImage
-                src="https://plus.unsplash.com/premium_photo-1678822368940-0259b3917808?q=80&w=2072&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1762117360986-9753aef7680f?q=80&w=3132&auto=format&fit=crop"
                 alt="Carport Hero"
             />
 

@@ -14,7 +14,7 @@ const specs = [
 const galleryImages = [
     { src: "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=2670&auto=format&fit=crop", alt: "Terrasoverkapping project 1" },
     { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop", alt: "Terrasoverkapping project 2" },
-    { src: "https://images.unsplash.com/photo-1599809275311-5bc51cdc3e0f?q=80&w=2670&auto=format&fit=crop", alt: "Terrasoverkapping project 3" },
+    { src: "/projects/terrasoverkapping-3.png", alt: "Terrasoverkapping project 3" },
 ]
 
 export default function TerrasoverkappingenPage() {

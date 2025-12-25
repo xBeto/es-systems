@@ -14,7 +14,7 @@ const specs = [
 const galleryImages = [
     { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2670&auto=format&fit=crop", alt: "Schuifwanden project 1" },
     { src: "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=2670&auto=format&fit=crop", alt: "Schuifwanden project 2" },
-    { src: "https://images.unsplash.com/photo-1599809275311-5bc51cdc3e0f?q=80&w=2670&auto=format&fit=crop", alt: "Schuifwanden project 3" },
+    { src: "https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?q=80&w=987&auto=format&fit=crop", alt: "Schuifwanden project 3" },
 ]
 
 export default function SchuifwandenPage() {
