@@ -16,8 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
+
 
 export default function RootLayout({
   children,
@@ -30,9 +29,7 @@ export default function RootLayout({
         className={`${manrope.variable} antialiased min-h-screen flex flex-col bg-background text-foreground`}
         style={{ fontFamily: "var(--font-manrope), system-ui, sans-serif" }}
       >
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+        {children}
       </body>
     </html>
   );
