@@ -9,22 +9,25 @@ const services = [
         id: "01",
         title: "Terrasoverkappingen",
         description: "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken.",
-        href: "/terrasoverkappingen",
-        image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2574&auto=format&fit=crop"
+        href: "/terrasoverkappingen"
     },
     {
         id: "02",
         title: "Carports",
         description: "Functionele esthetiek voor uw wagenpark. Vrijstaand of aanbouw, altijd in harmonie met de omgeving.",
-        href: "/carports",
-        image: "https://plus.unsplash.com/premium_photo-1678822368940-0259b3917808?q=80&w=2072&auto=format&fit=crop"
+        href: "/carports"
     },
     {
         id: "03",
         title: "Glazen Schuifwanden",
         description: "Maximale transparantie, maximaal comfort. Creëer een tuinkamer zonder visuele barrières.",
-        href: "/schuifwanden",
-        image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2568&auto=format&fit=crop"
+        href: "/schuifwanden"
+    },
+    {
+        id: "04",
+        title: "Aluminium Gevelbekleding",
+        description: "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken.",
+        href: "/gevelbekleding"
     },
 ]
 
@@ -69,7 +72,7 @@ export function ServicesSection() {
                                     </div>
 
                                     {/* Arrow / Action */}
-                                    <div className="flex items-center gap-4 shrink-0 md:ml-auto">
+                                    <div className="flex items-center gap-4 shrink-0 md:ml-auto mr-4">
                                         <span className="hidden lg:block text-xs uppercase tracking-widest text-muted-foreground group-hover:text-black transition-colors">
                                             Bekijk
                                         </span>
