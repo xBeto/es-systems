@@ -8,6 +8,7 @@ const navLinks = [
     { name: "Terrasoverkappingen", href: "/terrasoverkappingen" },
     { name: "Carports", href: "/carports" },
     { name: "Schuifwanden", href: "/schuifwanden" },
+    { name: "Gevelbekleding", href: "/gevelbekleding" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Over Ons", href: "/over-ons" },
 ]

@@ -49,6 +49,7 @@ export function SiteFooter() {
                             <li><Link href="/terrasoverkappingen" className="hover:underline">Terrasoverkappingen</Link></li>
                             <li><Link href="/carports" className="hover:underline">Carports</Link></li>
                             <li><Link href="/schuifwanden" className="hover:underline">Glazen Schuifwanden</Link></li>
+                            <li><Link href="/gevelbekleding" className="hover:underline">Aluminium Gevelbekleding</Link></li>
                         </ul>
                     </div>
 
