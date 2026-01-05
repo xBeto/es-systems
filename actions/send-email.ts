@@ -33,8 +33,8 @@ export async function sendEmail(prevState: any, formData: FormData) {
         const { name, email, message } = validatedData.data
 
         const { data, error } = await resend.emails.send({
-            from: "ES Systems Contact <info@essystems.be>",
-            to: ["info@essystems.be"],
+            from: "ES Systems Contact <test@essystems.be>",
+            to: ["duzenlib25@hotmail.com"],
             subject: `Nieuw bericht van ${name}`,
             react: ContactFormEmail({ name, email, message }),
             replyTo: email,

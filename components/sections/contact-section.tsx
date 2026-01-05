@@ -5,7 +5,15 @@ import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
 import { sendEmail } from "@/actions/send-email"
 
-const initialState = {
+interface ActionState {
+    success: boolean
+    message: string
+    errors?: {
+        [key: string]: string[]
+    }
+}
+
+const initialState: ActionState = {
     success: false,
     message: "",
 }
