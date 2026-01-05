@@ -57,11 +57,11 @@ export function SiteFooter() {
                             Hoofdkantoor
                         </span>
                         <address className="not-italic text-sm leading-relaxed text-muted-foreground">
-                            Industrieweg 42<br />
-                            3500 Hasselt<br />
-                            België (BE)<br /><br />
+                            Brancardiershof 13<br />
+                            3550 Heusden-Zolder<br />
+                            BTW: BE 069 79 73 594<br /><br />
                             <a href="mailto:info@essystems.be" className="text-foreground hover:underline">info@essystems.be</a><br />
-                            <a href="tel:+3211123456" className="text-foreground hover:underline">+32 11 12 34 56</a>
+                            <a href="tel:+32470101212" className="text-foreground hover:underline">+32 470 10 12 12</a>
                         </address>
                     </div>
 
