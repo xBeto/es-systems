@@ -5,7 +5,7 @@ import { ProductHero, ProductHeroImage, ProductDetails, ImageGallery } from "@/c
 import { ContactSection } from "@/components/sections/contact-section"
 
 const specs = [
-    { label: "Glasdikte", value: "8mm / 10mm Gehard" },
+    { label: "Glasdikte", value: "10mm Gehard" },
     { label: "Systeem", value: "Onderlopend railsysteem" },
     { label: "Profielen", value: "Ultra-slank aluminium" },
     { label: "Opties", value: "Handgrepen, Tochtborstels" },
@@ -21,18 +21,17 @@ export default function SchuifwandenPage() {
     return (
         <PageWrapper>
             <ProductHero
-                seriesNumber="03"
                 title={<>Glazen <br /> Schuifwanden</>}
                 description="Vervaag de grens tussen binnen en buiten. Beschutting tegen wind en regen met behoud van maximaal uitzicht."
             />
 
             <ProductHeroImage
-                src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2568&auto=format&fit=crop"
+                src="/SCHUIFWANDEN-HERO.jpeg"
                 alt="Schuifwanden Hero"
             />
 
             <ProductDetails
-                specsTitle="Details"
+                specsTitle="Eigenschappen"
                 specs={specs}
                 contentTitle="Comfort in Elk Seizoen"
                 content={

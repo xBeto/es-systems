@@ -15,12 +15,14 @@ import * as React from "react"
 interface ContactFormEmailProps {
     name: string
     email: string
+    btwNumber?: string
     message: string
 }
 
 export const ContactFormEmail = ({
     name,
     email,
+    btwNumber,
     message,
 }: ContactFormEmailProps) => (
     <Html>
@@ -35,6 +37,11 @@ export const ContactFormEmail = ({
                 <Text style={text}>
                     <strong>Email:</strong> {email}
                 </Text>
+                {btwNumber && (
+                    <Text style={text}>
+                        <strong>BTW Nummer:</strong> {btwNumber}
+                    </Text>
+                )}
                 <Hr style={hr} />
                 <Text style={text}>
                     <strong>Bericht:</strong>

@@ -10,8 +10,6 @@ interface ProductHeroProps {
 }
 
 export function ProductHero({
-    seriesNumber = "01",
-    seriesLabel = "Product Series",
     title,
     description
 }: ProductHeroProps) {
@@ -21,9 +19,6 @@ export function ProductHero({
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
                     <div className="md:col-span-8">
                         <FadeIn delay={0.1}>
-                            <span className="text-sm font-mono uppercase tracking-widest text-muted-foreground block mb-6">
-                                {seriesLabel} / {seriesNumber}
-                            </span>
                             <h1 className="text-5xl md:text-8xl font-medium tracking-tighter leading-[0.9] text-black mb-12">
                                 {title}
                             </h1>

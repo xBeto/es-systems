@@ -73,14 +73,13 @@ export function SiteFooter() {
                         <div className="flex gap-4">
                             <a href="#" className="w-10 h-10 border border-black/10 flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-all">FB</a>
                             <a href="#" className="w-10 h-10 border border-black/10 flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-all">IN</a>
-                            <a href="#" className="w-10 h-10 border border-black/10 flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-all">LI</a>
                         </div>
                     </div>
                 </div>
 
                 {/* Bottom: Copyright */}
                 <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground pt-8 border-t border-black/10">
-                    <p>© {new Date().getFullYear()} ES Systems. All Rights Reserved.</p>
+                    <p>© {new Date().getFullYear()} ES Systems. Alle rechten voorbehouden.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <Link href="/privacy" className="hover:text-black">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-black">Terms of Service</Link>

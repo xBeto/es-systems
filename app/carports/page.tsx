@@ -6,9 +6,9 @@ import { ContactSection } from "@/components/sections/contact-section"
 
 const specs = [
     { label: "Constructie", value: "Vrijstaand of Aanbouw" },
-    { label: "Daktype", value: "Vlak, Gebogen, Zadeldak" },
+    { label: "Daktype", value: "Gebogen" },
     { label: "Afwerking", value: "Poedercoating (alle RAL)" },
-    { label: "Extra's", value: "LED, Laadpaal integratie" },
+    { label: "Extra's", value: "LED" },
 ]
 
 const galleryImages = [
@@ -21,13 +21,12 @@ export default function CarportsPage() {
     return (
         <PageWrapper>
             <ProductHero
-                seriesNumber="02"
                 title={<>Aluminium <br /> Carports</>}
                 description="Premium bescherming voor uw voertuig. Strak design dat naadloos aansluit bij moderne architectuur."
             />
 
             <ProductHeroImage
-                src="https://images.unsplash.com/photo-1762117360986-9753aef7680f?q=80&w=3132&auto=format&fit=crop"
+                src="/CARPORT-HERO.jpeg"
                 alt="Carport Hero"
             />
 

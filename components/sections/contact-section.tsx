@@ -99,6 +99,20 @@ export function ContactSection() {
                                 )}
                             </div>
 
+                            {/* BTW Number Input (Optional) */}
+                            <div className="group">
+                                <label htmlFor="btwNumber" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
+                                    BTW Nummer <span className="opacity-50 font-normal">(Optioneel)</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="btwNumber"
+                                    name="btwNumber"
+                                    className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
+                                    placeholder="BE 0123.456.789"
+                                />
+                            </div>
+
                             {/* Message Input */}
                             <div className="group">
                                 <label htmlFor="message" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">

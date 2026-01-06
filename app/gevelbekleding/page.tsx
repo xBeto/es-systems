@@ -21,18 +21,17 @@ export default function GevelbekledingPage() {
     return (
         <PageWrapper>
             <ProductHero
-                seriesNumber="04"
                 title={<>Aluminium <br /> Gevelbekleding</>}
                 description="Geef uw woning een unieke uitstraling. Strakke lijnen, duurzame materialen en een perfecte afwerking voor een moderne look."
             />
 
             <ProductHeroImage
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop"
+                src="/GEVELBEKLEDING-HERO.png"
                 alt="Aluminium Gevelbekleding Hero"
             />
 
             <ProductDetails
-                specsTitle="Specificaties"
+                specsTitle="Eigenschappen"
                 specs={specs}
                 contentTitle="Esthetiek & Functionaliteit"
                 content={

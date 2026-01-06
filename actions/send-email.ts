@@ -9,6 +9,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 const contactFormSchema = z.object({
     name: z.string().min(1, "Name is required"),
     email: z.string().email("Invalid email address"),
+    btwNumber: z.string().optional(),
     message: z.string().min(1, "Message is required"),
 })
 
@@ -17,6 +18,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
         const rawData = {
             name: formData.get("name"),
             email: formData.get("email"),
+            btwNumber: formData.get("btwNumber"),
             message: formData.get("message"),
         }
 
@@ -30,13 +32,13 @@ export async function sendEmail(prevState: any, formData: FormData) {
             }
         }
 
-        const { name, email, message } = validatedData.data
+        const { name, email, btwNumber, message } = validatedData.data
 
         const { data, error } = await resend.emails.send({
             from: "ES Systems Contact <info@essystems.be>",
-            to: ["info@essystems.be"],
+            to: ["duzenlib25@hotmail.com"],
             subject: `Nieuw bericht van ${name}`,
-            react: ContactFormEmail({ name, email, message }),
+            react: ContactFormEmail({ name, email, btwNumber, message }),
             replyTo: email,
         })
 

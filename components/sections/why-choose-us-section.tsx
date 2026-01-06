@@ -4,7 +4,7 @@ import { Check } from "lucide-react"
 
 const features = [
     "Eigen fabricage & plaatsingsdienst",
-    "100% Belgisch aluminium",
+    "100% aluminium",
     "Oplossingen op maat",
     "10+ jaar garantie",
     "Snelle oplevering",
@@ -52,7 +52,7 @@ export function WhyChooseUsSection() {
                                     <span className="text-sm uppercase tracking-widest text-muted-foreground">Klanttevredenheid</span>
                                 </div>
                                 <div className="text-right">
-                                    <span className="block text-4xl font-bold mb-1">15+</span>
+                                    <span className="block text-4xl font-bold mb-1">8+</span>
                                     <span className="text-sm uppercase tracking-widest text-muted-foreground">Jaar ervaring</span>
                                 </div>
                             </div>
