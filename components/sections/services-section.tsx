@@ -6,25 +6,21 @@ import { FadeIn } from "@/components/ui/fade-in"
 
 const services = [
     {
-        id: "01",
         title: "Terrasoverkappingen",
         description: "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken.",
         href: "/terrasoverkappingen"
     },
     {
-        id: "02",
         title: "Carports",
         description: "Functionele esthetiek voor uw wagenpark. Vrijstaand of aanbouw, altijd in harmonie met de omgeving.",
         href: "/carports"
     },
     {
-        id: "03",
         title: "Glazen Schuifwanden",
         description: "Maximale transparantie, maximaal comfort. Creëer een tuinkamer zonder visuele barrières.",
         href: "/schuifwanden"
     },
     {
-        id: "04",
         title: "Aluminium Gevelbekleding",
         description: "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken.",
         href: "/gevelbekleding"
@@ -46,17 +42,12 @@ export function ServicesSection() {
 
                 <div className="flex flex-col">
                     {services.map((service, idx) => (
-                        <FadeIn key={service.id} delay={idx * 0.25}>
+                        <FadeIn key={service.title} delay={idx * 0.25}>
                             <Link
                                 href={service.href}
                                 className="group relative block border-t border-black/10 py-8 md:py-16 transition-all duration-500 hover:bg-[#F0F0F2]"
                             >
                                 <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-                                    {/* ID */}
-                                    <div className="text-sm font-mono text-muted-foreground group-hover:text-black transition-colors shrink-0">
-                                        /{service.id}
-                                    </div>
-
                                     {/* Mobile: Title + Arrow Wrapper */}
                                     <div className="flex items-center justify-between w-full md:contents gap-4">
                                         {/* Title */}
@@ -67,7 +58,7 @@ export function ServicesSection() {
                                         </div>
 
                                         {/* Arrow / Action */}
-                                        <div className="flex items-center gap-4 shrink-0 md:ml-auto md:order-last">
+                                        <div className="flex items-center gap-4 shrink-0 md:ml-auto md:order-last mr-4">
                                             <span className="hidden lg:block text-xs uppercase tracking-widest text-muted-foreground group-hover:text-black transition-colors">
                                                 Bekijk
                                             </span>
