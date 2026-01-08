@@ -13,7 +13,7 @@ export interface GalleryImage {
 interface ImageGalleryProps {
     title: string
     images: GalleryImage[]
-    layout?: "asymmetric-2col" | "asymmetric-2col-alt" | "grid-3" | "staggered-3"
+    layout?: "asymmetric-2col" | "asymmetric-2col-alt" | "grid-3" | "staggered-3" | "landscape-2col" | "landscape-3col" | "hero-landscape" | "mix-60-40"
 }
 
 const aspectClasses = {
@@ -43,6 +43,18 @@ export function ImageGallery({
                 )}
                 {layout === "staggered-3" && (
                     <Staggered3 images={images} />
+                )}
+                {layout === "landscape-2col" && (
+                    <Landscape2Col images={images} />
+                )}
+                {layout === "landscape-3col" && (
+                    <Landscape3Col images={images} />
+                )}
+                {layout === "hero-landscape" && (
+                    <HeroLandscape images={images} />
+                )}
+                {layout === "mix-60-40" && (
+                    <Mix6040 images={images} />
                 )}
             </div>
         </section>
@@ -158,6 +170,124 @@ function Staggered3({ images }: { images: GalleryImage[] }) {
                     />
                 </div>
             ))}
+        </div>
+    )
+}
+
+// Layout: 2 columns, both landscape
+function Landscape2Col({ images }: { images: GalleryImage[] }) {
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {images.slice(0, 2).map((image, idx) => (
+                <div
+                    key={idx}
+                    className={cn(
+                        "group relative overflow-hidden bg-neutral-100",
+                        image.aspectRatio ? aspectClasses[image.aspectRatio] : "aspect-video",
+                        image.className
+                    )}
+                >
+                    <ScrollRevealImage
+                        src={image.src}
+                        alt={image.alt}
+                        wrapperClassName="w-full h-full"
+                    />
+                </div>
+            ))}
+        </div>
+    )
+}
+
+// Layout: 3 columns, all landscape
+function Landscape3Col({ images }: { images: GalleryImage[] }) {
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {images.slice(0, 3).map((image, idx) => (
+                <div
+                    key={idx}
+                    className={cn(
+                        "group relative overflow-hidden bg-neutral-100",
+                        image.aspectRatio ? aspectClasses[image.aspectRatio] : "aspect-video",
+                        image.className
+                    )}
+                >
+                    <ScrollRevealImage
+                        src={image.src}
+                        alt={image.alt}
+                        wrapperClassName="w-full h-full"
+                    />
+                </div>
+            ))}
+        </div>
+    )
+}
+
+// Layout: One wide landscape layout on top, two smaller landscape layouts below
+function HeroLandscape({ images }: { images: GalleryImage[] }) {
+    const [first, second, third] = images
+    return (
+        <div className="flex flex-col gap-4">
+            {/* Hero Image */}
+            <div className="group relative aspect-[21/9] md:aspect-[2.5/1] overflow-hidden bg-neutral-100 w-full">
+                <ScrollRevealImage
+                    src={first?.src || ""}
+                    alt={first?.alt}
+                    wrapperClassName="w-full h-full"
+                />
+            </div>
+
+            {/* Bottom Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="group relative aspect-video overflow-hidden bg-neutral-100">
+                    <ScrollRevealImage
+                        src={second?.src || ""}
+                        alt={second?.alt}
+                        wrapperClassName="w-full h-full"
+                    />
+                </div>
+                <div className="group relative aspect-video overflow-hidden bg-neutral-100">
+                    <ScrollRevealImage
+                        src={third?.src || ""}
+                        alt={third?.alt}
+                        wrapperClassName="w-full h-full"
+                    />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+// Layout: 60/40 split on top row, full width on bottom row
+function Mix6040({ images }: { images: GalleryImage[] }) {
+    const [first, second, third] = images
+    return (
+        <div className="flex flex-col gap-4">
+            {/* Top Row: 60/40 */}
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <div className="md:col-span-3 group relative overflow-hidden bg-neutral-100">
+                    <ScrollRevealImage
+                        src={first?.src || ""}
+                        alt={first?.alt}
+                        wrapperClassName="w-full h-full"
+                    />
+                </div>
+                <div className="md:col-span-2 group relative overflow-hidden bg-neutral-100">
+                    <ScrollRevealImage
+                        src={second?.src || ""}
+                        alt={second?.alt}
+                        wrapperClassName="w-full h-full"
+                    />
+                </div>
+            </div>
+
+            {/* Bottom Row: 100% */}
+            <div className="group relative overflow-hidden bg-neutral-100 w-full">
+                <ScrollRevealImage
+                    src={third?.src || ""}
+                    alt={third?.alt}
+                    wrapperClassName="w-full h-full"
+                />
+            </div>
         </div>
     )
 }

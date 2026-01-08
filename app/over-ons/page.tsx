@@ -14,9 +14,9 @@ const storyContent = {
 }
 
 const atelierImages = [
-    { src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop", alt: "Atelier welding" },
-    { src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2670&auto=format&fit=crop", alt: "Blueprints" },
-    { src: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=2670&auto=format&fit=crop", alt: "Installation" },
+    { src: "/BEURS-ESSYSTEMS.jpeg", alt: "Beurs Polyclose" },
+    { src: "/ESSYSTEMS.jpeg", alt: "ESSYSTEMS" },
+    { src: "/glazenschuifwand-1.jpg", alt: "Glazenschuifwand" },
 ]
 
 const values = [

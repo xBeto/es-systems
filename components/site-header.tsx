@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 
@@ -14,6 +15,7 @@ const navLinks = [
 ]
 
 export function SiteHeader() {
+    const pathname = usePathname()
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -37,16 +39,24 @@ export function SiteHeader() {
                     </Link>
 
                     {/* Desktop Nav - Clean Line */}
-                    <nav className="hidden lg:flex items-center gap-12">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="text-sm font-medium uppercase tracking-widest hover:opacity-100 opacity-60 transition-opacity"
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
+                    <nav className="hidden lg:flex items-center lg:gap-2.5 xl:gap-12">
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href || pathname.startsWith(`${link.href}/`)
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={`relative text-sm font-bold uppercase tracking-widest transition-opacity duration-300
+                                    ${isActive ? "opacity-100" : "opacity-60 hover:opacity-100"}
+                                    after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-full after:bg-white
+                                    after:content-[''] after:transition-transform after:duration-300 after:ease-in-out after:origin-left
+                                    ${isActive ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"}
+                                    `}
+                                >
+                                    {link.name}
+                                </Link>
+                            )
+                        })}
                         <Link
                             href="/#contact"
                             className="px-6 py-2 border border-white/30 hover:bg-white hover:text-black transition-all duration-300 text-sm font-medium uppercase tracking-widest"

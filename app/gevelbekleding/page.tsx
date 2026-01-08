@@ -12,9 +12,9 @@ const specs = [
 ]
 
 const galleryImages = [
-    { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2670&auto=format&fit=crop", alt: "Gevelbekleding project 1" },
-    { src: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop", alt: "Gevelbekleding project 2" },
-    { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2670&auto=format&fit=crop", alt: "Gevelbekleding project 3" },
+    { src: "gevelbekleding-1.png", alt: "Gevelbekleding project 1" },
+    { src: "gevelbekleding-2.png", alt: "Gevelbekleding project 2" },
+    { src: "gevelbekleding-3.png", alt: "Gevelbekleding project 3" },
 ]
 
 export default function GevelbekledingPage() {

@@ -8,45 +8,33 @@ import { FadeIn } from "@/components/ui/fade-in"
 
 const projects = [
     {
-        title: "Villa Ceulemans",
         category: "Terrasoverkapping",
-        location: "Hasselt",
-        image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2574&auto=format&fit=crop",
+        image: "terrasoverkapping-1.jpg",
         className: "md:col-span-8 aspect-[16/9]"
     },
     {
-        title: "Parkzicht",
         category: "Carport",
-        location: "Genk",
-        image: "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=2670&auto=format&fit=crop",
+        image: "carport-1.jpeg",
         className: "md:col-span-4 aspect-[4/5]"
     },
     {
-        title: "Tuinkamer S.",
         category: "Schuifwanden",
-        location: "Zonhoven",
-        image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2670&auto=format&fit=crop",
-        className: "md:col-span-4 aspect-[4/5] md:mt-[-100px]"
+        image: "glazenschuifwand-2.jpg",
+        className: "md:col-span-4 aspect-[4/5] md:mt-[-50px]"
     },
     {
-        title: "Penthouse L.",
-        category: "Totaalproject",
-        location: "Maasmechelen",
-        image: "/projects/penthouse-l.png",
+        category: "Gevelbekleding",
+        image: "gevelbekleding-3.png",
         className: "md:col-span-8 aspect-[16/9]"
     },
     {
-        title: "Project B.",
-        category: "Carport",
-        location: "Beringen",
-        image: "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=2670&auto=format&fit=crop",
+        category: "Gevelbekleding",
+        image: "gevelbekleding-2.png",
         className: "md:col-span-6 aspect-square"
     },
     {
-        title: "Residentie K.",
         category: "Terrasoverkapping",
-        location: "Kiewit",
-        image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2568&auto=format&fit=crop",
+        image: "terrasoverkapping-2.jpg",
         className: "md:col-span-6 aspect-square md:mt-[100px]"
     }
 ]
@@ -81,15 +69,10 @@ export default function PortfolioPage() {
                             >
                                 <ScrollRevealImage
                                     src={project.image}
-                                    alt={project.title}
                                     wrapperClassName="w-full h-full"
                                 />
 
-                                <div className="mt-4 flex justify-between items-start">
-                                    <div>
-                                        <h3 className="text-xl font-medium">{project.title}</h3>
-                                        <p className="text-sm text-muted-foreground">{project.location}</p>
-                                    </div>
+                                <div className="mt-4 flex items-start">
                                     <span className="text-sm font-mono text-muted-foreground border px-2 py-0.5 rounded-full border-black/10">
                                         {project.category}
                                     </span>

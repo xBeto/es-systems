@@ -41,7 +41,7 @@ export function WhyChooseUsSection() {
                     {/* Right Image / Graphic */}
                     <div className="relative aspect-square md:aspect-[4/5] bg-neutral-100 overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop"
+                            src="essystems-polyclose.jpeg"
                             alt="Team ES Systems"
                             className="w-full h-full object-cover grayscale opacity-80 hover:scale-105 transition-transform duration-[1.5s] ease-out"
                         />
