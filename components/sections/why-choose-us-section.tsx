@@ -43,7 +43,7 @@ export function WhyChooseUsSection() {
                         <img
                             src="essystems-polyclose.jpeg"
                             alt="Team ES Systems"
-                            className="w-full h-full object-cover grayscale opacity-80 hover:scale-105 transition-transform duration-[1.5s] ease-out"
+                            className="w-full h-full object-cover grayscale hover:grayscale-0 opacity-80 hover:scale-105 transition-all duration-1000 ease-out"
                         />
                         <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm p-6 border border-black/5">
                             <div className="flex justify-between items-end">

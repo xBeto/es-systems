@@ -9,8 +9,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "ES Systems | Architectural Outdoor Living",
-  description: "Bespoke aluminium outdoor constructions. Engineering perfection for modern living.",
+  title: "ES Systems | Buitenleven Gedefinieerd",
+  description: "Wij ontwerpen architecturale aluminium constructies die de grens tussen binnen en buiten doen vervagen.",
   icons: {
     icon: "/favicon.ico",
   },
