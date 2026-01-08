@@ -1,18 +1,33 @@
 "use client"
 
-import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import { useActionState, useEffect } from "react"
+import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
+import { sendEmail } from "@/actions/send-email"
+
+interface ActionState {
+    success: boolean
+    message: string
+    errors?: {
+        [key: string]: string[]
+    }
+}
+
+const initialState: ActionState = {
+    success: false,
+    message: "",
+}
 
 export function ContactSection() {
-    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [state, formAction, isPending] = useActionState(sendEmail, initialState)
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        setIsSubmitting(true)
-        await new Promise((resolve) => setTimeout(resolve, 1500))
-        setIsSubmitting(false)
-    }
+    // Reset form after successful submission
+    useEffect(() => {
+        if (state.success) {
+            const form = document.getElementById("contact-form") as HTMLFormElement
+            form?.reset()
+        }
+    }, [state.success])
 
     return (
         <section id="contact" className="py-32 bg-[#F5F5F7] text-foreground border-t border-black/5">
@@ -38,7 +53,15 @@ export function ContactSection() {
 
                     {/* Right: Minimal Form */}
                     <div>
-                        <form onSubmit={handleSubmit} className="space-y-12">
+                        <form id="contact-form" action={formAction} className="space-y-12">
+
+                            {/* Status Messages */}
+                            {state?.message && (
+                                <div className={`p-4 rounded-lg flex items-center gap-3 ${state.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                                    {state.success && <CheckCircle2 className="w-5 h-5 flex-shrink-0" />}
+                                    <p>{state.message}</p>
+                                </div>
+                            )}
 
                             {/* Name Input */}
                             <div className="group">
@@ -48,10 +71,14 @@ export function ContactSection() {
                                 <input
                                     type="text"
                                     id="name"
+                                    name="name"
                                     required
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
                                     placeholder="John Doe"
                                 />
+                                {state?.errors?.name && (
+                                    <p className="text-red-500 text-sm mt-2">{state.errors.name[0]}</p>
+                                )}
                             </div>
 
                             {/* Email Input */}
@@ -62,9 +89,27 @@ export function ContactSection() {
                                 <input
                                     type="email"
                                     id="email"
+                                    name="email"
                                     required
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
                                     placeholder="john@example.com"
+                                />
+                                {state?.errors?.email && (
+                                    <p className="text-red-500 text-sm mt-2">{state.errors.email[0]}</p>
+                                )}
+                            </div>
+
+                            {/* BTW Number Input (Optional) */}
+                            <div className="group">
+                                <label htmlFor="btwNumber" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
+                                    BTW Nummer <span className="opacity-50 font-normal">(Optioneel)</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="btwNumber"
+                                    name="btwNumber"
+                                    className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
+                                    placeholder="BE 0123.456.789"
                                 />
                             </div>
 
@@ -75,20 +120,24 @@ export function ContactSection() {
                                 </label>
                                 <textarea
                                     id="message"
+                                    name="message"
                                     required
                                     rows={3}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20 resize-none"
                                     placeholder="Vertel ons over uw project..."
                                 />
+                                {state?.errors?.message && (
+                                    <p className="text-red-500 text-sm mt-2">{state.errors.message[0]}</p>
+                                )}
                             </div>
 
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                disabled={isSubmitting}
+                                disabled={isPending}
                                 className="group flex items-center gap-4 text-lg font-medium hover:opacity-70 transition-opacity disabled:opacity-50"
                             >
-                                {isSubmitting ? "Verzenden..." : "Verstuur Aanvraag"}
+                                {isPending ? "Verzenden..." : "Verstuur Aanvraag"}
                                 <span className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                     <ArrowRight className="w-5 h-5" />
                                 </span>

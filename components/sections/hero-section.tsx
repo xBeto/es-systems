@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { ArrowDown } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
@@ -16,23 +17,14 @@ export function HeroSection() {
         <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-[#F5F5F7] flex flex-col justify-between">
             {/* Background Media - Light & Airy Architectural Vibe */}
             <div className="absolute inset-0 z-0">
-                <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="h-full w-full object-cover opacity-80 mix-blend-multiply filter contrast-[0.9] brightness-110"
-                    style={{ transform: loaded ? "scale(1)" : "scale(1.05)", transition: "transform 10s ease-out" }}
-                >
-                    {/* 
-             Using a very light, abstract architectural video. 
-             If this specific link fails or is too dark, the opacity/mix-blend will help keep it light.
-           */}
-                    <source
-                        src="https://videos.pexels.com/video-files/7578543/7578543-hd_1920_1080_30fps.mp4"
-                        type="video/mp4"
-                    />
-                </video>
+                <Image
+                    src="/HERO-IMAGE.jpg"
+                    alt="Hero background"
+                    fill
+                    className="object-cover opacity-80 mix-blend-multiply filter"
+                    priority
+                    style={{ transform: loaded ? "scale(1)" : "scale(1.1)", transition: "transform 10s ease-out" }}
+                />
                 {/* White overlay to ensure text contrast for DARK text */}
                 <div className="absolute inset-0 bg-white/20" />
             </div>
@@ -70,7 +62,7 @@ export function HeroSection() {
             {/* Footer / Scroll Indicator */}
             <div className="relative z-10 w-full px-6 md:px-12 pb-12 flex justify-between items-end">
                 <div className="hidden md:block text-[#121212]/40 text-xs font-mono uppercase tracking-widest">
-                    [EST. 2008] — Hasselt, BE
+                    [EST. 2018] Heusden - Zolder, BE
                 </div>
                 <div className="animate-bounce text-[#121212]/60">
                     <ArrowDown size={24} strokeWidth={1} />

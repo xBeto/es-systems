@@ -6,28 +6,27 @@ import { ContactSection } from "@/components/sections/contact-section"
 
 const specs = [
     { label: "Constructie", value: "Vrijstaand of Aanbouw" },
-    { label: "Daktype", value: "Vlak, Gebogen, Zadeldak" },
+    { label: "Daktype", value: "Gebogen" },
     { label: "Afwerking", value: "Poedercoating (alle RAL)" },
-    { label: "Extra's", value: "LED, Laadpaal integratie" },
+    { label: "Extra's", value: "LED" },
 ]
 
 const galleryImages = [
-    { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2670&auto=format&fit=crop", alt: "Carport project 1" },
-    { src: "https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?q=80&w=987&auto=format&fit=crop", alt: "Carport project 2" },
-    { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop", alt: "Carport project 3" },
+    { src: "carport-1.jpeg", alt: "Carport project 1" },
+    { src: "carport-2.jpeg", alt: "Carport project 2" },
+    { src: "carport-3.jpeg", alt: "Carport project 3" },
 ]
 
 export default function CarportsPage() {
     return (
         <PageWrapper>
             <ProductHero
-                seriesNumber="02"
                 title={<>Aluminium <br /> Carports</>}
                 description="Premium bescherming voor uw voertuig. Strak design dat naadloos aansluit bij moderne architectuur."
             />
 
             <ProductHeroImage
-                src="https://images.unsplash.com/photo-1762117360986-9753aef7680f?q=80&w=3132&auto=format&fit=crop"
+                src="/CARPORT-HERO.jpeg"
                 alt="Carport Hero"
             />
 
@@ -51,9 +50,9 @@ export default function CarportsPage() {
             />
 
             <ImageGallery
-                title="Projecten"
+                title="Realisaties"
                 images={galleryImages}
-                layout="asymmetric-2col-alt"
+                layout="hero-landscape"
             />
 
             <ContactSection />

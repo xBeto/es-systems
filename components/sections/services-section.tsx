@@ -6,25 +6,24 @@ import { FadeIn } from "@/components/ui/fade-in"
 
 const services = [
     {
-        id: "01",
         title: "Terrasoverkappingen",
         description: "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken.",
-        href: "/terrasoverkappingen",
-        image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2574&auto=format&fit=crop"
+        href: "/terrasoverkappingen"
     },
     {
-        id: "02",
         title: "Carports",
         description: "Functionele esthetiek voor uw wagenpark. Vrijstaand of aanbouw, altijd in harmonie met de omgeving.",
-        href: "/carports",
-        image: "https://plus.unsplash.com/premium_photo-1678822368940-0259b3917808?q=80&w=2072&auto=format&fit=crop"
+        href: "/carports"
     },
     {
-        id: "03",
         title: "Glazen Schuifwanden",
         description: "Maximale transparantie, maximaal comfort. Creëer een tuinkamer zonder visuele barrières.",
-        href: "/schuifwanden",
-        image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2568&auto=format&fit=crop"
+        href: "/schuifwanden"
+    },
+    {
+        title: "Aluminium Gevelbekleding",
+        description: "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken.",
+        href: "/gevelbekleding"
     },
 ]
 
@@ -32,7 +31,7 @@ export function ServicesSection() {
     return (
         <section className="py-32 bg-background text-foreground overflow-hidden">
             <div className="container mx-auto px-6 md:px-12 max-w-[1400px]">
-                <div className="mb-24 flex flex-col md:flex-row items-end justify-between border-b border-black/10 pb-8">
+                <div className="md:mb-24 flex flex-col md:flex-row md:items-end justify-between md:border-b md:border-black/10 pb-8">
                     <h2 className="text-4xl md:text-6xl font-medium tracking-tight max-w-xl">
                         Onze <br /> Expertise
                     </h2>
@@ -43,22 +42,30 @@ export function ServicesSection() {
 
                 <div className="flex flex-col">
                     {services.map((service, idx) => (
-                        <FadeIn key={service.id} delay={idx * 0.25}>
+                        <FadeIn key={service.title} delay={idx * 0.25}>
                             <Link
                                 href={service.href}
-                                className="group relative block border-t border-black/10 py-16 transition-all duration-500 hover:bg-[#F0F0F2]"
+                                className="group relative block border-t border-black/10 py-8 md:py-16 transition-all duration-500 hover:bg-[#F0F0F2]"
                             >
                                 <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-                                    {/* ID */}
-                                    <div className="text-sm font-mono text-muted-foreground group-hover:text-black transition-colors shrink-0">
-                                        /{service.id}
-                                    </div>
+                                    {/* Mobile: Title + Arrow Wrapper */}
+                                    <div className="flex items-center justify-between w-full md:contents gap-4">
+                                        {/* Title */}
+                                        <div className="md:w-[280px] lg:w-[360px] shrink-0 transition-transform duration-500 group-hover:translate-x-2 flex-1 md:flex-none">
+                                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-foreground">
+                                                {service.title}
+                                            </h3>
+                                        </div>
 
-                                    {/* Title */}
-                                    <div className="md:w-[280px] lg:w-[360px] shrink-0 transition-transform duration-500 group-hover:translate-x-2">
-                                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-foreground">
-                                            {service.title}
-                                        </h3>
+                                        {/* Arrow / Action */}
+                                        <div className="flex items-center gap-4 shrink-0 md:ml-auto md:order-last mr-4">
+                                            <span className="hidden lg:block text-xs uppercase tracking-widest text-muted-foreground group-hover:text-black transition-colors">
+                                                Bekijk
+                                            </span>
+                                            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-300 transform group-hover:scale-110">
+                                                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                                            </div>
+                                        </div>
                                     </div>
 
                                     {/* Description */}
@@ -66,16 +73,6 @@ export function ServicesSection() {
                                         <p className="text-base leading-relaxed max-w-md">
                                             {service.description}
                                         </p>
-                                    </div>
-
-                                    {/* Arrow / Action */}
-                                    <div className="flex items-center gap-4 shrink-0 md:ml-auto">
-                                        <span className="hidden lg:block text-xs uppercase tracking-widest text-muted-foreground group-hover:text-black transition-colors">
-                                            Bekijk
-                                        </span>
-                                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-300 transform group-hover:scale-110">
-                                            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
-                                        </div>
                                     </div>
                                 </div>
                             </Link>

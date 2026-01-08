@@ -7,31 +7,23 @@ import { FadeIn } from "@/components/ui/fade-in"
 
 const projects = [
     {
-        title: "Villa Ceulemans",
         category: "Terrasoverkapping",
-        location: "Hasselt",
-        image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2574&auto=format&fit=crop",
+        image: "terrasoverkapping-1.jpg",
         className: "md:col-span-8 aspect-[16/9]"
     },
     {
-        title: "Parkzicht",
         category: "Carport",
-        location: "Genk",
-        image: "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=2670&auto=format&fit=crop",
+        image: "carport-1.jpeg",
         className: "md:col-span-4 aspect-[4/5]"
     },
     {
-        title: "Tuinkamer S.",
         category: "Schuifwanden",
-        location: "Zonhoven",
-        image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2670&auto=format&fit=crop",
-        className: "md:col-span-4 aspect-[4/5] md:mt-[-100px]"
+        image: "glazenschuifwand-2.jpg",
+        className: "md:col-span-4 aspect-[4/5] md:mt-[-50px]"
     },
     {
-        title: "Penthouse L.",
-        category: "Totaalproject",
-        location: "Maasmechelen",
-        image: "/projects/penthouse-l.png",
+        category: "Gevelbekleding",
+        image: "gevelbekleding-3.png",
         className: "md:col-span-8 aspect-[16/9]"
     }
 ]
@@ -70,16 +62,11 @@ export function PortfolioSection() {
                 */}
                             <ScrollRevealImage
                                 src={project.image}
-                                alt={project.title}
                                 wrapperClassName="w-full h-full"
                             />
 
                             {/* Text overlay/details */}
-                            <div className="mt-4 flex justify-between items-start opacity-100 md:opacity-70 group-hover:opacity-100 transition-opacity">
-                                <div>
-                                    <h3 className="text-xl font-medium">{project.title}</h3>
-                                    <p className="text-sm text-white/60">{project.location}</p>
-                                </div>
+                            <div className="mt-4 flex items-start opacity-100 md:opacity-70 group-hover:opacity-100 transition-opacity">
                                 <span className="text-sm font-mono text-white/50 border px-2 py-0.5 rounded-full border-white/20">
                                     {project.category}
                                 </span>

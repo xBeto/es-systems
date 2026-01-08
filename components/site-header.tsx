@@ -8,49 +8,73 @@ const navLinks = [
     { name: "Terrasoverkappingen", href: "/terrasoverkappingen" },
     { name: "Carports", href: "/carports" },
     { name: "Schuifwanden", href: "/schuifwanden" },
+    { name: "Gevelbekleding", href: "/gevelbekleding" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Over Ons", href: "/over-ons" },
 ]
 
+import { usePathname } from "next/navigation"
+
 export function SiteHeader() {
+    const pathname = usePathname()
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isHero, setIsHero] = useState(true)
+
+    const isHome = pathname === "/"
 
     useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 50)
+        const handleScroll = () => {
+            const scrollY = window.scrollY
+            setIsScrolled(scrollY > 50)
+            if (typeof window !== "undefined") {
+                setIsHero(scrollY < (window.innerHeight - 50))
+            }
+        }
         window.addEventListener("scroll", handleScroll)
+        // Initial check
+        handleScroll()
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
+
+    const useBlackHeader = isHome && isHero
 
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out mix-blend-difference text-white ${isScrolled ? "py-4" : "py-8"
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${isScrolled ? "py-4" : "py-8"} ${useBlackHeader ? "text-black mix-blend-normal" : "text-white mix-blend-exclusion"
                     }`}
             >
-                <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+                <div className="container mx-auto px-4 md:px-0 flex items-center justify-between">
                     {/* Logo - Minimalist Wordmark */}
                     <Link href="/" className="z-50 relative group">
                         <span className="text-xl font-bold tracking-tighter uppercase">
                             ES Systems
-                            <span className="w-1.5 h-1.5 bg-white inline-block ml-1 rounded-full group-hover:scale-0 transition-transform duration-300" />
                         </span>
                     </Link>
 
                     {/* Desktop Nav - Clean Line */}
-                    <nav className="hidden lg:flex items-center gap-12">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="text-sm font-medium uppercase tracking-widest hover:opacity-100 opacity-60 transition-opacity"
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
+                    <nav className="hidden lg:flex items-center lg:gap-2.5 xl:gap-12">
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href || pathname.startsWith(`${link.href}/`)
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={`relative text-sm font-bold uppercase tracking-widest transition-all duration-300
+                                    ${useBlackHeader ? "backdrop-blur-xs" : ""}
+                                    after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-full after:bg-current
+                                    after:content-[''] after:transition-transform after:duration-300 after:ease-in-out after:origin-left
+                                    ${isActive ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"}
+                                    `}
+                                >
+                                    {link.name}
+                                </Link>
+                            )
+                        })}
                         <Link
                             href="/#contact"
-                            className="px-6 py-2 border border-white/30 hover:bg-white hover:text-black transition-all duration-300 text-sm font-medium uppercase tracking-widest"
+                            className={`px-6 py-2 border border-current hover:opacity-70 transition-all duration-300 text-sm font-medium uppercase tracking-widest`}
                         >
                             Contact
                         </Link>

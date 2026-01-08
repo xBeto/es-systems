@@ -49,6 +49,7 @@ export function SiteFooter() {
                             <li><Link href="/terrasoverkappingen" className="hover:underline">Terrasoverkappingen</Link></li>
                             <li><Link href="/carports" className="hover:underline">Carports</Link></li>
                             <li><Link href="/schuifwanden" className="hover:underline">Glazen Schuifwanden</Link></li>
+                            <li><Link href="/gevelbekleding" className="hover:underline">Aluminium Gevelbekleding</Link></li>
                         </ul>
                     </div>
 
@@ -57,11 +58,11 @@ export function SiteFooter() {
                             Hoofdkantoor
                         </span>
                         <address className="not-italic text-sm leading-relaxed text-muted-foreground">
-                            Industrieweg 42<br />
-                            3500 Hasselt<br />
-                            België (BE)<br /><br />
+                            Brancardiershof 13<br />
+                            3550 Heusden-Zolder<br />
+                            BTW: BE 069 79 73 594<br /><br />
                             <a href="mailto:info@essystems.be" className="text-foreground hover:underline">info@essystems.be</a><br />
-                            <a href="tel:+3211123456" className="text-foreground hover:underline">+32 11 12 34 56</a>
+                            <a href="tel:+32470101212" className="text-foreground hover:underline">+32 470 10 12 12</a>
                         </address>
                     </div>
 
@@ -70,19 +71,18 @@ export function SiteFooter() {
                             Socials
                         </span>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 border border-black/10 flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-all">FB</a>
-                            <a href="#" className="w-10 h-10 border border-black/10 flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-all">IN</a>
-                            <a href="#" className="w-10 h-10 border border-black/10 flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-all">LI</a>
+                            <a href="https://www.facebook.com/E.S.Systems.Terrasoverkappingen" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-black/10 flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-all">FB</a>
+                            <a href="https://www.instagram.com/es_systems_terrasoverkappingen" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-black/10 flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-all">IN</a>
                         </div>
                     </div>
                 </div>
 
                 {/* Bottom: Copyright */}
                 <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground pt-8 border-t border-black/10">
-                    <p>© {new Date().getFullYear()} ES Systems. All Rights Reserved.</p>
+                    <p>© {new Date().getFullYear()} ES Systems. Alle rechten voorbehouden.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
-                        <Link href="/privacy" className="hover:text-black">Privacy Policy</Link>
-                        <Link href="/terms" className="hover:text-black">Terms of Service</Link>
+                        <Link href="/privacy" className="hover:text-black">Privacybeleid</Link>
+                        <Link href="/terms" className="hover:text-black">Algemene Voorwaarden</Link>
                     </div>
                 </div>
             </div>

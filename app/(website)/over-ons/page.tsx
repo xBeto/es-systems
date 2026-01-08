@@ -8,15 +8,15 @@ import { ContactSection } from "@/components/sections/contact-section"
 const storyContent = {
     quote: "Wij geloven dat een buitenruimte geen nagedachte toevoeging is, maar een essentieel onderdeel van uw leefomgeving.",
     paragraphs: [
-        "ES Systems begon meer dan 15 jaar geleden als een bescheiden atelier in Hasselt. Onze missie was helder: aluminium constructies maken die niet alleen technisch perfect zijn, maar ook esthetisch een meerwaarde bieden aan de moderne architectuur.",
-        "Al onze producten worden nog steeds in eigen huis ontworpen en vervaardigd. Dit stelt ons in staat om strikte kwaliteitscontroles uit te voeren en 100% maatwerk te leveren. Geen standaard pakketten, maar oplossingen die tot op de millimeter aansluiten bij uw woning."
+        "ES Systems is actief sinds 2018 met een duidelijke missie: aluminium maatwerkoplossingen realiseren die technisch perfect zijn en tegelijk een esthetische meerwaarde bieden aan moderne architectuur.",
+        "Dankzij onze eigen productie kunnen we een hoge en constante kwaliteit garanderen. We werken uitsluitend op maat en bieden geen standaardoplossingen aan. Elk project wordt tot in de kleinste details afgestemd op uw woning, zodat het resultaat perfect aansluit tot op de millimeter."
     ]
 }
 
 const atelierImages = [
-    { src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop", alt: "Atelier welding" },
-    { src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2670&auto=format&fit=crop", alt: "Blueprints" },
-    { src: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=2670&auto=format&fit=crop", alt: "Installation" },
+    { src: "/BEURS-ESSYSTEMS.jpeg", alt: "Beurs Polyclose" },
+    { src: "/ESSYSTEMS.jpeg", alt: "ESSYSTEMS" },
+    { src: "/glazenschuifwand-1.jpg", alt: "Glazenschuifwand" },
 ]
 
 const values = [

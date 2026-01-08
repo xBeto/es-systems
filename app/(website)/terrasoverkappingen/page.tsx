@@ -5,34 +5,33 @@ import { ProductHero, ProductHeroImage, ProductDetails, ImageGallery } from "@/c
 import { ContactSection } from "@/components/sections/contact-section"
 
 const specs = [
-    { label: "Materiaal", value: "6063-T6 Aluminium" },
-    { label: "Dakbedekking", value: "Veiligheidsglas / Polycarbonaat" },
-    { label: "Overspanning", value: "Tot 7 meter (vrijdragend)" },
+    { label: "Materiaal", value: "100% Aluminium" },
+    { label: "Dakbedekking", value: "Glas / Polycarbonaat" },
+    { label: "Overspanning", value: "Tot 5/6 meter (vrijdragend)" },
     { label: "Garantie", value: "10 Jaar" },
 ]
 
 const galleryImages = [
-    { src: "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=2670&auto=format&fit=crop", alt: "Terrasoverkapping project 1" },
-    { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop", alt: "Terrasoverkapping project 2" },
-    { src: "/projects/terrasoverkapping-3.png", alt: "Terrasoverkapping project 3" },
+    { src: "terrasoverkapping-1.jpg", alt: "Terrasoverkapping project 1" },
+    { src: "terrasoverkapping-3.jpg", alt: "Terrasoverkapping project 2" },
+    { src: "terrasoverkapping-2.jpg", alt: "Terrasoverkapping project 3" },
 ]
 
 export default function TerrasoverkappingenPage() {
     return (
         <PageWrapper>
             <ProductHero
-                seriesNumber="01"
                 title={<>Terras <br /> Overkappingen</>}
                 description="Verleng uw leefruimte. Architecturale bescherming tegen zon, regen en wind, zonder compromissen."
             />
 
             <ProductHeroImage
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop"
+                src="/TERRASOVERKAPPING-HERO.jpg"
                 alt="Terrasoverkapping Hero"
             />
 
             <ProductDetails
-                specsTitle="Specificaties"
+                specsTitle="Eigenschappen"
                 specs={specs}
                 contentTitle="Design Filosofie"
                 content={

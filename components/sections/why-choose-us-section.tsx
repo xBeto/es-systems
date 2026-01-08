@@ -4,7 +4,7 @@ import { Check } from "lucide-react"
 
 const features = [
     "Eigen fabricage & plaatsingsdienst",
-    "100% Belgisch aluminium",
+    "100% aluminium",
     "Oplossingen op maat",
     "10+ jaar garantie",
     "Snelle oplevering",
@@ -41,7 +41,7 @@ export function WhyChooseUsSection() {
                     {/* Right Image / Graphic */}
                     <div className="relative aspect-square md:aspect-[4/5] bg-neutral-100 overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop"
+                            src="essystems-polyclose.jpeg"
                             alt="Team ES Systems"
                             className="w-full h-full object-cover grayscale opacity-80 hover:scale-105 transition-transform duration-[1.5s] ease-out"
                         />
@@ -52,7 +52,7 @@ export function WhyChooseUsSection() {
                                     <span className="text-sm uppercase tracking-widest text-muted-foreground">Klanttevredenheid</span>
                                 </div>
                                 <div className="text-right">
-                                    <span className="block text-4xl font-bold mb-1">15+</span>
+                                    <span className="block text-4xl font-bold mb-1">8+</span>
                                     <span className="text-sm uppercase tracking-widest text-muted-foreground">Jaar ervaring</span>
                                 </div>
                             </div>
