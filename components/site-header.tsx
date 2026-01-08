@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 
@@ -13,6 +12,8 @@ const navLinks = [
     { name: "Portfolio", href: "/portfolio" },
     { name: "Over Ons", href: "/over-ons" },
 ]
+
+import { usePathname } from "next/navigation"
 
 export function SiteHeader() {
     const pathname = usePathname()
@@ -27,7 +28,7 @@ export function SiteHeader() {
             const scrollY = window.scrollY
             setIsScrolled(scrollY > 50)
             if (typeof window !== "undefined") {
-                setIsHero(scrollY < (window.innerHeight - 100))
+                setIsHero(scrollY < (window.innerHeight - 50))
             }
         }
         window.addEventListener("scroll", handleScroll)
@@ -60,8 +61,8 @@ export function SiteHeader() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className={`relative text-sm font-bold uppercase tracking-widest transition-opacity duration-300
-                                    ${isActive ? "opacity-100" : "opacity-60 hover:opacity-100"}
+                                    className={`relative text-sm font-bold uppercase tracking-widest transition-all duration-300
+                                    ${useBlackHeader ? "backdrop-blur-xs" : ""}
                                     after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-full after:bg-current
                                     after:content-[''] after:transition-transform after:duration-300 after:ease-in-out after:origin-left
                                     ${isActive ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"}
