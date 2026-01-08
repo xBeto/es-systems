@@ -35,7 +35,27 @@ const projects = [
     {
         category: "Terrasoverkapping",
         image: "terrasoverkapping-2.jpg",
-        className: "md:col-span-6 aspect-square md:mt-[100px]"
+        className: "md:col-span-6 aspect-square md:mt-[30px]"
+    },
+    {
+        category: "Schuifwanden",
+        image: "glazenschuifwand-4.jpg",
+        className: "md:col-span-6 aspect-[4/3] md:mt-[-50px]"
+    },
+    {
+        category: "Terrasoverkapping",
+        image: "terrasoverkapping-4.jpg",
+        className: "md:col-span-6 aspect-square md:mt-[-25px]"
+    },
+    {
+        category: "Terrasoverkapping",
+        image: "terrasoverkapping-5.png",
+        className: "md:col-span-6 md:mt-[-220px]"
+    },
+    {
+        category: "Schuifwanden",
+        image: "glazenschuifwand-5.jpg",
+        className: "md:col-span-6 aspect-[16/7]"
     }
 ]
 
