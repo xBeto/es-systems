@@ -37,7 +37,7 @@ export function SiteHeader() {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
-    const useBlackHeader = isHome && isHero
+    const useBlackHeader = isHome && isHero && !isMenuOpen
 
     return (
         <>
