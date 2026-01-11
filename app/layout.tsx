@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google"; // Switching to Manrope for that tech/architectural feel
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-manrope), system-ui, sans-serif" }}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
