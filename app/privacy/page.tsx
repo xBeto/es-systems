@@ -54,21 +54,28 @@ export default function PrivacyPage() {
                 </section>
 
                 <section className="mb-10">
-                    <h2 className="text-2xl font-semibold text-foreground mb-4">4. Delen van gegevens</h2>
+                    <h2 className="text-2xl font-semibold text-foreground mb-4">4. Analytische Tools</h2>
+                    <p>
+                        Wij maken gebruik van Vercel Analytics om inzicht te krijgen in het bezoekersverkeer op onze website. Deze tool verzamelt geanonimiseerde gegevens over paginaweergaven, bezoektijden en verwijzende bronnen. Er worden geen persoonlijk identificeerbare gegevens (PII) verzameld en er worden geen cookies gebruikt voor trackingdoeleinden.
+                    </p>
+                </section>
+
+                <section className="mb-10">
+                    <h2 className="text-2xl font-semibold text-foreground mb-4">5. Delen van gegevens</h2>
                     <p>
                         Uw gegevens worden niet verkocht aan derden. Wij delen uw gegevens enkel met derde partijen indien dit noodzakelijk is voor de uitvoering van de overeenkomst (bijvoorbeeld onderaannemers of leveranciers) of om te voldoen aan een wettelijke verplichting.
                     </p>
                 </section>
 
                 <section className="mb-10">
-                    <h2 className="text-2xl font-semibold text-foreground mb-4">5. Bewaartermijn</h2>
+                    <h2 className="text-2xl font-semibold text-foreground mb-4">6. Bewaartermijn</h2>
                     <p>
                         Wij bewaren uw persoonsgegevens niet langer dan noodzakelijk is voor de doeleinden waarvoor ze zijn verzameld, rekening houdend met de wettelijke bewaartermijnen (bijv. boekhoudkundige verplichtingen: 7 jaar).
                     </p>
                 </section>
 
                 <section className="mb-10">
-                    <h2 className="text-2xl font-semibold text-foreground mb-4">6. Uw rechten</h2>
+                    <h2 className="text-2xl font-semibold text-foreground mb-4">7. Uw rechten</h2>
                     <p>
                         U heeft te allen tijde recht op inzage, correctie, of verwijdering van uw persoonsgegevens. Daarnaast heeft u het recht om bezwaar te maken tegen de verwerking of om de overdraagbaarheid van uw gegevens te vragen. U kunt deze rechten uitoefenen door contact met ons op te nemen via <a href="mailto:info@essystems.be" className="underline">info@essystems.be</a>.
                     </p>
