@@ -66,7 +66,7 @@ export function ContactSection() {
                             {/* Name Input */}
                             <div className="group">
                                 <label htmlFor="name" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
-                                    Uw Naam
+                                    Uw Naam <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="text"
@@ -84,7 +84,7 @@ export function ContactSection() {
                             {/* Email Input */}
                             <div className="group">
                                 <label htmlFor="email" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
-                                    Email Adres
+                                    Email Adres <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="email"
@@ -96,6 +96,42 @@ export function ContactSection() {
                                 />
                                 {state?.errors?.email && (
                                     <p className="text-red-500 text-sm mt-2">{state.errors.email[0]}</p>
+                                )}
+                            </div>
+
+                            {/* Phone Number Input */}
+                            <div className="group">
+                                <label htmlFor="phone" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
+                                    Telefoonnummer <span className="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    required
+                                    className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
+                                    placeholder="+32 123 45 67 89"
+                                />
+                                {state?.errors?.phone && (
+                                    <p className="text-red-500 text-sm mt-2">{state.errors.phone[0]}</p>
+                                )}
+                            </div>
+
+                            {/* Region Input */}
+                            <div className="group">
+                                <label htmlFor="regio" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
+                                    Regio <span className="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="regio"
+                                    name="regio"
+                                    required
+                                    className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
+                                    placeholder="Limburg, Antwerpen, Brussel..."
+                                />
+                                {state?.errors?.regio && (
+                                    <p className="text-red-500 text-sm mt-2">{state.errors.regio[0]}</p>
                                 )}
                             </div>
 
@@ -116,7 +152,7 @@ export function ContactSection() {
                             {/* Message Input */}
                             <div className="group">
                                 <label htmlFor="message" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
-                                    Uw Bericht
+                                    Uw Bericht <span className="text-red-500">*</span>
                                 </label>
                                 <textarea
                                     id="message"

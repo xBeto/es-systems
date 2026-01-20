@@ -15,6 +15,8 @@ import * as React from "react"
 interface ContactFormEmailProps {
     name: string
     email: string
+    phone: string
+    regio: string
     btwNumber?: string
     message: string
 }
@@ -22,6 +24,8 @@ interface ContactFormEmailProps {
 export const ContactFormEmail = ({
     name,
     email,
+    phone,
+    regio,
     btwNumber,
     message,
 }: ContactFormEmailProps) => (
@@ -36,6 +40,12 @@ export const ContactFormEmail = ({
                 </Text>
                 <Text style={text}>
                     <strong>Email:</strong> {email}
+                </Text>
+                <Text style={text}>
+                    <strong>Telefoon:</strong> {phone}
+                </Text>
+                <Text style={text}>
+                    <strong>Regio:</strong> {regio}
                 </Text>
                 {btwNumber && (
                     <Text style={text}>
