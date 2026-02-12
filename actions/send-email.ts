@@ -40,7 +40,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
 
         const { data, error } = await resend.emails.send({
             from: "ES Systems Contact <info@essystems.be>",
-            to: ["info@essystems.be"],
+            to: ["offerte@essystems.be"],
             subject: `Nieuw bericht van ${name}`,
             react: ContactFormEmail({ name, email, phone, regio, btwNumber, message }),
             replyTo: email,
