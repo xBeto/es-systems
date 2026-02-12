@@ -46,10 +46,18 @@ export function SiteHeader() {
                     }`}
             >
                 <div className="container mx-auto px-4 md:px-0 flex items-center justify-between">
-                    {/* Logo - Minimalist Wordmark */}
-                    <Link href="/" className="z-50 relative group">
-                        <span className="text-xl font-bold tracking-tighter uppercase">
-                            ES Systems
+                    {/* Logo - Recreated Brand Mark */}
+                    <Link href="/" className="z-50 relative group flex items-center gap-0">
+                        <span
+                            className={`inline-flex items-center justify-center px-[0.3em] py-[0.25em] rounded-[0.25em] mr-[0.15rem] text-xl font-bold tracking-tighter leading-none ${useBlackHeader
+                                ? "bg-black text-white"
+                                : "bg-white text-black"
+                                }`}
+                        >
+                            ES
+                        </span>
+                        <span className="text-xl font-bold tracking-tighter leading-none">
+                            SYSTEMS
                         </span>
                     </Link>
 
@@ -74,9 +82,15 @@ export function SiteHeader() {
                         })}
                         <Link
                             href="/#contact"
-                            className={`px-6 py-2 border border-current hover:opacity-70 transition-all duration-300 text-sm font-medium uppercase tracking-widest`}
+                            className={`group relative px-6 py-2 border border-current overflow-hidden text-sm font-medium uppercase tracking-widest
+                                before:absolute before:inset-0 before:pointer-events-none
+                                before:[clip-path:circle(0%_at_50%_50%)] hover:before:[clip-path:circle(150%_at_50%_50%)]
+                                before:transition-[clip-path] before:duration-500 before:ease-[cubic-bezier(0.4,0,0.2,1)]
+                                ${useBlackHeader ? "before:bg-black hover:text-white hover:border-black" : "before:bg-white hover:text-black"}
+                                transition-colors duration-300
+                            `}
                         >
-                            Contact
+                            <span className="relative z-10">Contact</span>
                         </Link>
                     </nav>
 
