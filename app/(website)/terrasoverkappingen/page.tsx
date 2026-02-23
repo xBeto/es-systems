@@ -14,7 +14,7 @@ const specs = [
 const galleryImages = [
     { src: "terrasoverkapping-1.jpg", alt: "Terrasoverkapping project 1" },
     { src: "terrasoverkapping-3.jpg", alt: "Terrasoverkapping project 2" },
-    { src: "terrasoverkapping-2.jpg", alt: "Terrasoverkapping project 3" },
+    { src: "terrasoverkapping-2.webp", alt: "Terrasoverkapping project 3" },
 ]
 
 export default function TerrasoverkappingenPage() {

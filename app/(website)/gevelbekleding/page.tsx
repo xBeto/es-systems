@@ -13,8 +13,8 @@ const specs = [
 
 const galleryImages = [
     { src: "gevelbekleding-1.png", alt: "Gevelbekleding project 1" },
-    { src: "gevelbekleding-2.png", alt: "Gevelbekleding project 2" },
-    { src: "gevelbekleding-3.png", alt: "Gevelbekleding project 3" },
+    { src: "gevelbekleding-2.webp", alt: "Gevelbekleding project 2" },
+    { src: "gevelbekleding-3.webp", alt: "Gevelbekleding project 3" },
 ]
 
 export default function GevelbekledingPage() {
@@ -26,7 +26,7 @@ export default function GevelbekledingPage() {
             />
 
             <ProductHeroImage
-                src="/GEVELBEKLEDING-HERO.png"
+                src="/GEVELBEKLEDING-HERO.webp"
                 alt="Aluminium Gevelbekleding Hero"
             />
 

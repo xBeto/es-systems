@@ -23,7 +23,7 @@ const projects = [
     },
     {
         category: "Gevelbekleding",
-        image: "gevelbekleding-3.png",
+        image: "gevelbekleding-3.webp",
         className: "md:col-span-8 aspect-[16/9]"
     }
 ]

@@ -24,17 +24,17 @@ const projects = [
     },
     {
         category: "Gevelbekleding",
-        image: "gevelbekleding-3.png",
+        image: "gevelbekleding-3.webp",
         className: "md:col-span-8 aspect-[16/9]"
     },
     {
         category: "Gevelbekleding",
-        image: "gevelbekleding-2.png",
+        image: "gevelbekleding-2.webp",
         className: "md:col-span-6 aspect-square"
     },
     {
         category: "Terrasoverkapping",
-        image: "terrasoverkapping-2.jpg",
+        image: "terrasoverkapping-2.webp",
         className: "md:col-span-6 aspect-square md:mt-[30px]"
     },
     {
@@ -49,7 +49,7 @@ const projects = [
     },
     {
         category: "Terrasoverkapping",
-        image: "terrasoverkapping-5.png",
+        image: "terrasoverkapping-5.webp",
         className: "md:col-span-6 md:mt-[-220px]"
     },
     {
