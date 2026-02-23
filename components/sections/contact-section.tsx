@@ -192,6 +192,7 @@ export function ContactSection() {
                                 <div className="group mb-2 sm:mb-0">
                                     <ReCAPTCHA
                                         sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                                        hl="nl"
                                     />
                                     {state?.errors?.['g-recaptcha-response'] && (
                                         <p className="text-red-500 text-sm mt-2">{state.errors['g-recaptcha-response'][0]}</p>
