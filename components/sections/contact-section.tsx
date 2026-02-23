@@ -12,6 +12,14 @@ interface ActionState {
     errors?: {
         [key: string]: string[]
     }
+    inputs?: {
+        name: string
+        email: string
+        phone: string
+        regio: string
+        btwNumber: string
+        message: string
+    }
 }
 
 const initialState: ActionState = {
@@ -86,6 +94,7 @@ export function ContactSection() {
                                     id="name"
                                     name="name"
                                     required
+                                    defaultValue={state?.inputs?.name || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
                                     placeholder="John Doe"
                                 />
@@ -104,6 +113,7 @@ export function ContactSection() {
                                     id="email"
                                     name="email"
                                     required
+                                    defaultValue={state?.inputs?.email || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
                                     placeholder="john@example.com"
                                 />
@@ -122,6 +132,7 @@ export function ContactSection() {
                                     id="phone"
                                     name="phone"
                                     required
+                                    defaultValue={state?.inputs?.phone || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
                                     placeholder="+32 123 45 67 89"
                                 />
@@ -140,6 +151,7 @@ export function ContactSection() {
                                     id="regio"
                                     name="regio"
                                     required
+                                    defaultValue={state?.inputs?.regio || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
                                     placeholder="Limburg, Antwerpen, Brussel..."
                                 />
@@ -157,6 +169,7 @@ export function ContactSection() {
                                     type="text"
                                     id="btwNumber"
                                     name="btwNumber"
+                                    defaultValue={state?.inputs?.btwNumber || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
                                     placeholder="BE 0123.456.789"
                                 />
@@ -172,6 +185,7 @@ export function ContactSection() {
                                     name="message"
                                     required
                                     rows={3}
+                                    defaultValue={state?.inputs?.message || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20 resize-none"
                                     placeholder="Vertel ons over uw project..."
                                 />

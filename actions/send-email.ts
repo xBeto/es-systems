@@ -31,14 +31,23 @@ export async function sendEmail(prevState: any, formData: FormData) {
         }
 
         const rawData = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            phone: formData.get("phone"),
-            regio: formData.get("regio"),
-            btwNumber: formData.get("btwNumber"),
-            message: formData.get("message"),
-            fax: formData.get("fax"),
-            "g-recaptcha-response": formData.get("g-recaptcha-response"),
+            name: formData.get("name")?.toString() || "",
+            email: formData.get("email")?.toString() || "",
+            phone: formData.get("phone")?.toString() || "",
+            regio: formData.get("regio")?.toString() || "",
+            btwNumber: formData.get("btwNumber")?.toString() || "",
+            message: formData.get("message")?.toString() || "",
+            fax: formData.get("fax")?.toString() || "",
+            "g-recaptcha-response": formData.get("g-recaptcha-response")?.toString() || "",
+        }
+
+        const inputsForState = {
+            name: rawData.name,
+            email: rawData.email,
+            phone: rawData.phone,
+            regio: rawData.regio,
+            btwNumber: rawData.btwNumber,
+            message: rawData.message,
         }
 
         const validatedData = contactFormSchema.safeParse(rawData)
@@ -48,6 +57,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
                 success: false,
                 message: "Vul alstublieft alle velden correct in.",
                 errors: validatedData.error.flatten().fieldErrors,
+                inputs: inputsForState,
             }
         }
 
@@ -71,6 +81,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
             return {
                 success: false,
                 message: "Serverconfiguratiefout: reCAPTCHA is niet correct ingesteld.",
+                inputs: inputsForState,
             }
         }
 
@@ -90,6 +101,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
             return {
                 success: false,
                 message: "reCAPTCHA validatie mislukt. Probeer het opnieuw.",
+                inputs: inputsForState,
             }
         }
 
@@ -106,6 +118,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
             return {
                 success: false,
                 message: "Er is iets misgegaan bij het versturen. Probeer het later opnieuw.",
+                inputs: inputsForState,
             }
         }
 
