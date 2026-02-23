@@ -63,6 +63,18 @@ export function ContactSection() {
                                 </div>
                             )}
 
+                            {/* Honeypot Input (hidden from real users) */}
+                            <div className="absolute opacity-0 -z-50 h-0 w-0 overflow-hidden" aria-hidden="true" tabIndex={-1}>
+                                <label htmlFor="fax">Fax</label>
+                                <input
+                                    type="text"
+                                    id="fax"
+                                    name="fax"
+                                    autoComplete="off"
+                                    tabIndex={-1}
+                                />
+                            </div>
+
                             {/* Name Input */}
                             <div className="group">
                                 <label htmlFor="name" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">

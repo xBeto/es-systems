@@ -3,6 +3,7 @@
 import { Resend } from "resend"
 import ContactFormEmail from "@/components/emails/contact-form-email"
 import { z } from "zod"
+import { checkBotId } from 'botid/server'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -13,10 +14,20 @@ const contactFormSchema = z.object({
     regio: z.string().min(1, "Regio is required"),
     btwNumber: z.string().optional(),
     message: z.string().min(1, "Message is required"),
+    fax: z.string().optional(), // Honeypot field
 })
 
 export async function sendEmail(prevState: any, formData: FormData) {
     try {
+        const verification = await checkBotId()
+
+        if (verification.isBot) {
+            return {
+                success: false,
+                message: "Toegang geweigerd: Bot gedetecteerd.",
+            }
+        }
+
         const rawData = {
             name: formData.get("name"),
             email: formData.get("email"),
@@ -24,6 +35,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
             regio: formData.get("regio"),
             btwNumber: formData.get("btwNumber"),
             message: formData.get("message"),
+            fax: formData.get("fax"),
         }
 
         const validatedData = contactFormSchema.safeParse(rawData)
@@ -36,7 +48,17 @@ export async function sendEmail(prevState: any, formData: FormData) {
             }
         }
 
-        const { name, email, phone, regio, btwNumber, message } = validatedData.data
+        const { name, email, phone, regio, btwNumber, message, fax } = validatedData.data
+
+        // Honeypot check: if the 'fax' field is filled, it's a bot.
+        // We pretend the submission was successful to not alert the bot.
+        if (fax) {
+            console.warn(`Honeypot triggered by ${email}`)
+            return {
+                success: true,
+                message: "Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.",
+            }
+        }
 
         const { data, error } = await resend.emails.send({
             from: "ES Systems Contact <info@essystems.be>",
