@@ -15,8 +15,10 @@ const contactFormSchema = z.object({
     btwNumber: z.string().optional(),
     message: z.string().min(1, "Message is required"),
     fax: z.string().optional(), // Honeypot field
+    'g-recaptcha-response': z.string().min(1, "Bevestig alstublieft dat u geen robot bent."),
 })
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function sendEmail(prevState: any, formData: FormData) {
     try {
         const verification = await checkBotId()
@@ -36,6 +38,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
             btwNumber: formData.get("btwNumber"),
             message: formData.get("message"),
             fax: formData.get("fax"),
+            "g-recaptcha-response": formData.get("g-recaptcha-response"),
         }
 
         const validatedData = contactFormSchema.safeParse(rawData)
@@ -60,7 +63,37 @@ export async function sendEmail(prevState: any, formData: FormData) {
             }
         }
 
-        const { data, error } = await resend.emails.send({
+        const recaptchaToken = validatedData.data['g-recaptcha-response'];
+        const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+
+        if (!recaptchaSecret) {
+            console.error("RECAPTCHA_SECRET_KEY is missing from environment variables.");
+            return {
+                success: false,
+                message: "Serverconfiguratiefout: reCAPTCHA is niet correct ingesteld.",
+            }
+        }
+
+        // Verify the token with Google
+        const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: `secret=${recaptchaSecret}&response=${recaptchaToken}`,
+        });
+
+        const recaptchaData = await verifyRes.json();
+
+        if (!recaptchaData.success) {
+            console.warn("reCAPTCHA validation failed", recaptchaData);
+            return {
+                success: false,
+                message: "reCAPTCHA validatie mislukt. Probeer het opnieuw.",
+            }
+        }
+
+        const { error } = await resend.emails.send({
             from: "ES Systems Contact <info@essystems.be>",
             to: ["offerte@essystems.be"],
             subject: `Nieuw bericht van ${name}`,

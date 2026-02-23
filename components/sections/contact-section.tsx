@@ -4,6 +4,7 @@ import { useActionState, useEffect } from "react"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
 import { sendEmail } from "@/actions/send-email"
+import ReCAPTCHA from "react-google-recaptcha"
 
 interface ActionState {
     success: boolean
@@ -162,7 +163,7 @@ export function ContactSection() {
                             </div>
 
                             {/* Message Input */}
-                            <div className="group">
+                            <div className="group mb-2">
                                 <label htmlFor="message" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
                                     Uw Bericht <span className="text-red-500">*</span>
                                 </label>
@@ -179,17 +180,30 @@ export function ContactSection() {
                                 )}
                             </div>
 
-                            {/* Submit Button */}
-                            <button
-                                type="submit"
-                                disabled={isPending}
-                                className="group flex items-center gap-4 text-lg font-medium hover:opacity-70 transition-opacity disabled:opacity-50"
-                            >
-                                {isPending ? "Verzenden..." : "Verstuur Aanvraag"}
-                                <span className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                    <ArrowRight className="w-5 h-5" />
-                                </span>
-                            </button>
+                            {/* Action Row: reCAPTCHA + Submit Button */}
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mt-8 w-full">
+                                {/* Google reCAPTCHA v2 */}
+                                <div className="group mb-2 sm:mb-0">
+                                    <ReCAPTCHA
+                                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                                    />
+                                    {state?.errors?.['g-recaptcha-response'] && (
+                                        <p className="text-red-500 text-sm mt-2">{state.errors['g-recaptcha-response'][0]}</p>
+                                    )}
+                                </div>
+
+                                {/* Submit Button */}
+                                <button
+                                    type="submit"
+                                    disabled={isPending}
+                                    className="group flex items-center gap-4 text-lg font-medium hover:opacity-70 transition-opacity disabled:opacity-50"
+                                >
+                                    {isPending ? "Verzenden..." : "Verstuur Aanvraag"}
+                                    <span className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                        <ArrowRight className="w-5 h-5" />
+                                    </span>
+                                </button>
+                            </div>
 
                         </form>
                     </div>
