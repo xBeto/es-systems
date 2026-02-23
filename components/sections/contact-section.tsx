@@ -188,7 +188,7 @@ export function ContactSection() {
                                         sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                                     />
                                     {state?.errors?.['g-recaptcha-response'] && (
-                                        <p className="text-red-600 text-sm mt-2">{state.errors['g-recaptcha-response'][0]}</p>
+                                        <p className="text-red-500 text-sm mt-2">{state.errors['g-recaptcha-response'][0]}</p>
                                     )}
                                 </div>
 
