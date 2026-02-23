@@ -64,14 +64,6 @@ export function ContactSection() {
                     <div>
                         <form id="contact-form" action={formAction} className="space-y-12">
 
-                            {/* Status Messages */}
-                            {state?.message && (
-                                <div className={`p-4 rounded-lg flex items-center gap-3 ${state.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-                                    {state.success && <CheckCircle2 className="w-5 h-5 flex-shrink-0" />}
-                                    <p>{state.message}</p>
-                                </div>
-                            )}
-
                             {/* Honeypot Input (hidden from real users) */}
                             <div className="absolute opacity-0 -z-50 h-0 w-0 overflow-hidden" aria-hidden="true" tabIndex={-1}>
                                 <label htmlFor="fax">Fax</label>
@@ -219,6 +211,13 @@ export function ContactSection() {
                                 </button>
                             </div>
 
+                            {/* Status Messages */}
+                            {state?.message && (
+                                <div className={`p-4 rounded-lg flex items-center gap-3 ${state.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                                    {state.success && <CheckCircle2 className="w-5 h-5 flex-shrink-0" />}
+                                    <p>{state.message}</p>
+                                </div>
+                            )}
                         </form>
                     </div>
 
