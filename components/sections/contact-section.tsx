@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
 import { sendEmail } from "@/actions/send-email"
 import ReCAPTCHA from "react-google-recaptcha"
+import { sendGAEvent } from '@next/third-parties/google'
 
 interface ActionState {
     success: boolean
@@ -35,6 +36,12 @@ export function ContactSection() {
         if (state.success) {
             const form = document.getElementById("contact-form") as HTMLFormElement
             form?.reset()
+
+            // Trigger Google Analytics 4 generate_lead conversion event
+            sendGAEvent('event', 'generate_lead', {
+                event_category: 'Contact',
+                event_label: 'Contact Form Submission',
+            })
         }
     }, [state.success])
 
