@@ -83,6 +83,7 @@ export function SiteFooter() {
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <Link href="/privacy" className="hover:text-black">Privacybeleid</Link>
                         <Link href="/terms" className="hover:text-black">Algemene Voorwaarden</Link>
+                        <Link href="/sales-and-delivery-terms" className="hover:text-black">Verkoop- en leveringsvoorwaarden</Link>
                     </div>
                 </div>
             </div>
