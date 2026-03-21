@@ -3,13 +3,7 @@
 import { PageWrapper } from "@/components/layout"
 import { ProductHero, ProductHeroImage, ProductDetails, ImageGallery } from "@/components/product"
 import { ContactSection } from "@/components/sections/contact-section"
-
-const specs = [
-    { label: "Materiaal", value: "Hoogwaardig Aluminium" },
-    { label: "Afwerking", value: "Poedercoating (Alle RAL-kleuren)" },
-    { label: "Montage", value: "Onzichtbare bevestiging" },
-    { label: "Duurzaamheid", value: "Onderhoudsarm & Weerbestendig" },
-]
+import { useTranslations } from "next-intl"
 
 const galleryImages = [
     { src: "gevelbekleding-1.png", alt: "Gevelbekleding project 1" },
@@ -18,11 +12,20 @@ const galleryImages = [
 ]
 
 export default function GevelbekledingPage() {
+    const t = useTranslations("Gevelbekleding")
+    
+    const specs = [
+        { label: t("labels.material"), value: t("specs.material") },
+        { label: t("labels.finish"), value: t("specs.finish") },
+        { label: t("labels.mounting"), value: t("specs.mounting") },
+        { label: t("labels.durability"), value: t("specs.durability") },
+    ]
+
     return (
         <PageWrapper>
             <ProductHero
-                title={<>Aluminium <br /> Gevelbekleding</>}
-                description="Geef uw woning een unieke uitstraling. Strakke lijnen, duurzame materialen en een perfecte afwerking voor een moderne look."
+                title={<span dangerouslySetInnerHTML={{ __html: t("hero.title") }} />}
+                description={t("hero.description")}
             />
 
             <ProductHeroImage
@@ -31,25 +34,23 @@ export default function GevelbekledingPage() {
             />
 
             <ProductDetails
-                specsTitle="Eigenschappen"
+                specsTitle={t("details.specsTitle")}
                 specs={specs}
-                contentTitle="Esthetiek & Functionaliteit"
+                contentTitle={t("details.contentTitle")}
                 content={
                     <>
                         <p className="mb-6">
-                            Onze aluminium gevelbekleding combineert architecturale schoonheid met technische perfectie.
-                            Het systeem biedt niet alleen een visuele upgrade voor uw woning, maar zorgt ook voor een duurzame bescherming van uw gevel.
+                            {t("details.p1")}
                         </p>
                         <p>
-                            Dankzij de onzichtbare bevestiging en de mogelijkheid om isolatie te integreren, is dit de ideale oplossing voor zowel renovatie als nieuwbouw.
-                            Kies uit een breed scala aan profielen en kleuren om uw persoonlijke stempel te drukken.
+                            {t("details.p2")}
                         </p>
                     </>
                 }
             />
 
             <ImageGallery
-                title="Realisaties"
+                title={t("galleryTitle")}
                 images={galleryImages}
                 layout="asymmetric-2col"
             />

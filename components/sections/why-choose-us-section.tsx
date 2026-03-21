@@ -1,17 +1,19 @@
 "use client"
 
 import { Check } from "lucide-react"
-
-const features = [
-    "Eigen fabricage & plaatsingsdienst",
-    "100% aluminium",
-    "Oplossingen op maat",
-    "10+ jaar garantie",
-    "Snelle oplevering",
-    "Persoonlijke service"
-]
+import { useTranslations } from "next-intl"
 
 export function WhyChooseUsSection() {
+    const t = useTranslations("WhyChooseUs")
+
+    const features = [
+        t("features.f1"),
+        t("features.f2"),
+        t("features.f3"),
+        t("features.f4"),
+        t("features.f5"),
+        t("features.f6")
+    ]
     return (
         <section className="py-32 bg-background border-y border-black/10">
             <div className="container mx-auto px-6 md:px-12">
@@ -19,11 +21,12 @@ export function WhyChooseUsSection() {
 
                     {/* Left Content */}
                     <div>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8 leading-[1.1]">
-                            Waarom kiezen voor <br /> ES Systems?
-                        </h2>
+                        <h2 
+                            className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8 leading-[1.1]"
+                            dangerouslySetInnerHTML={{ __html: t("title") }}
+                        />
                         <p className="text-xl text-muted-foreground leading-relaxed max-w-md mb-12">
-                            Wij geloven in de kracht van eenvoud en kwaliteit. Geen loze beloftes, maar tastbaar vakmanschap dat generaties meegaat.
+                            {t("subtitle")}
                         </p>
 
                         <div className="space-y-4">
@@ -39,7 +42,7 @@ export function WhyChooseUsSection() {
                     </div>
 
                     {/* Right Image / Graphic */}
-                    <div className="relative aspect-square md:aspect-[4/5] bg-neutral-100 overflow-hidden">
+                    <div className="relative aspect-square md:aspect-4/5 bg-neutral-100 overflow-hidden">
                         <img
                             src="essystems-polyclose.jpeg"
                             alt="Team ES Systems"
@@ -49,11 +52,11 @@ export function WhyChooseUsSection() {
                             <div className="flex justify-between items-end">
                                 <div>
                                     <span className="block text-4xl font-bold mb-1">98%</span>
-                                    <span className="text-sm uppercase tracking-widest text-muted-foreground">Klanttevredenheid</span>
+                                    <span className="text-sm uppercase tracking-widest text-muted-foreground">{t("stats.s1")}</span>
                                 </div>
                                 <div className="text-right">
                                     <span className="block text-4xl font-bold mb-1">8+</span>
-                                    <span className="text-sm uppercase tracking-widest text-muted-foreground">Jaar ervaring</span>
+                                    <span className="text-sm uppercase tracking-widest text-muted-foreground">{t("stats.s2")}</span>
                                 </div>
                             </div>
                         </div>

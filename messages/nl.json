@@ -1,0 +1,237 @@
+{
+  "Metadata": {
+    "title": "ES Systems | Buitenleven Gedefinieerd",
+    "description": "Wij ontwerpen architecturale aluminium constructies die de grens tussen binnen en buiten doen vervagen."
+  },
+  "Navbar": {
+    "terrasoverkappingen": "Terrasoverkappingen",
+    "carports": "Carports",
+    "schuifwanden": "Schuifwanden",
+    "gevelbekleding": "Gevelbekleding",
+    "portfolio": "Portfolio",
+    "overOns": "Over Ons",
+    "contact": "Contact",
+    "startProject": "Start een Project"
+  },
+  "Footer": {
+    "readyToStart": "Klaar om uw droomproject te starten?",
+    "contactText": "Neem contact op voor een vrijblijvend gesprek. Wij denken graag met u mee van ontwerp tot realisatie.",
+    "requestQuote": "Vraag Offerte",
+    "menu": "Menu",
+    "products": "Producten",
+    "headquarters": "Hoofdkantoor",
+    "socials": "Socials",
+    "home": "Home",
+    "aboutUs": "Over ons",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "terrasoverkappingen": "Terrasoverkappingen",
+    "carports": "Carports",
+    "schuifwanden": "Glazen Schuifwanden",
+    "gevelbekleding": "Aluminium Gevelbekleding",
+    "allRightsReserved": "Alle rechten voorbehouden.",
+    "privacyPolicy": "Privacybeleid",
+    "terms": "Algemene Voorwaarden",
+    "deliveryTerms": "Verkoop- en leveringsvoorwaarden"
+  },
+  "Hero": {
+    "title1": "Buitenleven",
+    "title2": "Gedefinieerd",
+    "subtitle": "Wij ontwerpen architecturale aluminium constructies die de grens tussen binnen en buiten doen vervagen.",
+    "viewProjects": "Bekijk Projecten"
+  },
+  "Services": {
+    "title": "Onze <br /> Expertise",
+    "subtitle": "Wij creëren op maat gemaakte oplossingen die functionaliteit en design naadloos integreren.",
+    "view": "Bekijk",
+    "items": {
+      "t1": "Terrasoverkappingen",
+      "d1": "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken.",
+      "t2": "Carports",
+      "d2": "Functionele esthetiek voor uw wagenpark. Vrijstaand of aanbouw, altijd in harmonie met de omgeving.",
+      "t3": "Glazen Schuifwanden",
+      "d3": "Maximale transparantie, maximaal comfort. Creëer een tuinkamer zonder visuele barrières.",
+      "t4": "Aluminium Gevelbekleding",
+      "d4": "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken."
+    }
+  },
+  "Portfolio": {
+    "selectedProjects": "Geselecteerde Projecten",
+    "title": "Portfolio",
+    "viewArchive": "Bekijk Archief",
+    "viewAll": "Bekijk Alle Projecten",
+    "categories": {
+      "t1": "Terrasoverkapping",
+      "t2": "Carport",
+      "t3": "Schuifwanden",
+      "t4": "Gevelbekleding"
+    }
+  },
+  "WhyChooseUs": {
+    "title": "Waarom kiezen voor <br /> ES Systems?",
+    "subtitle": "Wij geloven in de kracht van eenvoud en kwaliteit. Geen loze beloftes, maar tastbaar vakmanschap dat generaties meegaat.",
+    "features": {
+      "f1": "Eigen fabricage & plaatsingsdienst",
+      "f2": "100% aluminium",
+      "f3": "Oplossingen op maat",
+      "f4": "10+ jaar garantie",
+      "f5": "Snelle oplevering",
+      "f6": "Persoonlijke service"
+    },
+    "stats": {
+      "s1": "Klanttevredenheid",
+      "s2": "Jaar ervaring"
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "heading": "Start een <br /> Project",
+    "subtitle": "Heeft u een visie voor uw buitenruimte? Laat het ons weten. Wij vertalen uw ideeën naar aluminium realiteit.",
+    "fields": {
+      "name": "Uw Naam",
+      "email": "Email Adres",
+      "phone": "Telefoonnummer",
+      "regio": "Regio",
+      "btw": "BTW Nummer",
+      "optional": "(Optioneel)",
+      "message": "Uw Bericht"
+    },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "phone": "+32 123 45 67 89",
+      "regio": "Limburg, Antwerpen, Brussel...",
+      "btw": "BE 0123.456.789",
+      "message": "Vertel ons over uw project..."
+    },
+    "buttons": {
+      "submit": "Verstuur Aanvraag",
+      "sending": "Verzenden..."
+    }
+  },
+  "Terrasoverkappingen": {
+    "specs": {
+      "material": "100% Aluminium",
+      "roofing": "Glas / Polycarbonaat",
+      "span": "Tot 5/6 meter (vrijdragend)",
+      "warranty": "10 Jaar"
+    },
+    "labels": {
+      "material": "Materiaal",
+      "roofing": "Dakbedekking",
+      "span": "Overspanning",
+      "warranty": "Garantie"
+    },
+    "hero": {
+      "title": "Terras <br /> Overkappingen",
+      "description": "Verleng uw leefruimte. Architecturale bescherming tegen zon, regen en wind, zonder compromissen."
+    },
+    "details": {
+      "specsTitle": "Eigenschappen",
+      "contentTitle": "Design Filosofie",
+      "p1": "Onze terrasoverkappingen zijn ontworpen met één doel: het naadloos integreren van binnen- en buitenleven. We schuwen onnodige ornamenten en kiezen voor strakke lijnen die de architectuur van uw woning respecteren en versterken.",
+      "p2": "Dankzij ons innovatieve modulaire systeem kunnen we elke overkapping volledig personaliseren. Geïntegreerde LED-verlichting, onzichtbare waterafvoer en optionele glazen schuifwanden maken het plaatje compleet."
+    },
+    "galleryTitle": "Realisaties"
+  },
+  "Carports": {
+    "specs": {
+      "construction": "Vrijstaand of Aanbouw",
+      "roofType": "Gebogen",
+      "finish": "Poedercoating (alle RAL)",
+      "extras": "LED"
+    },
+    "labels": {
+      "construction": "Constructie",
+      "roofType": "Daktype",
+      "finish": "Afwerking",
+      "extras": "Extra's"
+    },
+    "hero": {
+      "title": "Aluminium <br /> Carports",
+      "description": "Premium bescherming voor uw voertuig. Strak design dat naadloos aansluit bij moderne architectuur."
+    },
+    "details": {
+      "specsTitle": "Eigenschappen",
+      "contentTitle": "Functionele Esthetiek",
+      "p1": "Een carport is meer dan louter functioneel; het is een prominent onderdeel van uw gevelbeeld. Onze aluminium carports combineren een lichte, open structuur met robuuste weersbestendigheid.",
+      "p2": "We ontwerpen elke carport op maat van uw woning en wagenpark. Van compacte enkele carports tot ruime dubbele opstellingen met geïntegreerde berging voor fietsen of tuingereedschap. Perfect voorbereid op de toekomst met opties voor EV-laadpalen en zonnepanelen."
+    },
+    "galleryTitle": "Realisaties"
+  },
+  "Schuifwanden": {
+    "specs": {
+      "thickness": "10mm Gehard",
+      "system": "Onderlopend railsysteem",
+      "profiles": "Ultra-slank aluminium",
+      "options": "Handgrepen, Tochtborstels"
+    },
+    "labels": {
+      "thickness": "Glasdikte",
+      "system": "Systeem",
+      "profiles": "Profielen",
+      "options": "Opties"
+    },
+    "hero": {
+      "title": "Glazen <br /> Schuifwanden",
+      "description": "Vervaag de grens tussen binnen en buiten. Beschutting tegen wind en regen met behoud van maximaal uitzicht."
+    },
+    "details": {
+      "specsTitle": "Eigenschappen",
+      "contentTitle": "Comfort in Elk Seizoen",
+      "p1": "Transformeer uw terrasoverkapping tot een volwaardige tuinkamer. Onze glazen schuifwanden bieden bescherming tegen de elementen zonder het open karakter van uw tuin te verliezen.",
+      "p2": "Dankzij het soepel lopende railsysteem schuift u de panelen moeiteloos open of dicht. De panelen zijn voorzien van gepolijst veiligheidsglas voor maximale helderheid en veiligheid. Met optionele meenemers opent u de volledige wand in één vloeiende beweging."
+    },
+    "galleryTitle": "Realisaties"
+  },
+  "Gevelbekleding": {
+    "specs": {
+      "material": "Hoogwaardig Aluminium",
+      "finish": "Poedercoating (Alle RAL)",
+      "mounting": "Onzichtbare bevestiging",
+      "durability": "Onderhoudsarm & Weerbestendig"
+    },
+    "labels": {
+      "material": "Materiaal",
+      "finish": "Afwerking",
+      "mounting": "Montage",
+      "durability": "Duurzaamheid"
+    },
+    "hero": {
+      "title": "Aluminium <br /> Gevelbekleding",
+      "description": "Geef uw woning een unieke uitstraling. Strakke lijnen, duurzame materialen en een perfecte afwerking voor een moderne look."
+    },
+    "details": {
+      "specsTitle": "Eigenschappen",
+      "contentTitle": "Esthetiek & Functionaliteit",
+      "p1": "Onze aluminium gevelbekleding combineert architecturale schoonheid met technische perfectie. Het systeem biedt niet alleen een visuele upgrade voor uw woning, maar zorgt ook voor een duurzame bescherming van uw gevel.",
+      "p2": "Dankzij de onzichtbare bevestiging en de mogelijkheid om isolatie te integreren, is dit de ideale oplossing voor zowel renovatie als nieuwbouw. Kies uit een breed scala aan profielen en kleuren om uw persoonlijke stempel te drukken."
+    },
+    "galleryTitle": "Realisaties"
+  },
+  "OverOns": {
+    "hero": {
+      "label": "Over het atelier",
+      "title": "Vakmanschap <br /> in Aluminium"
+    },
+    "story": {
+      "quote": "Wij geloven dat een buitenruimte geen nagedachte toevoeging is, maar een essentieel onderdeel van uw leefomgeving.",
+      "p1": "ES Systems is actief sinds 2018 met een duidelijke missie: aluminium maatwerkoplossingen realiseren die technisch perfect zijn en tegelijk een esthetische meerwaarde bieden aan moderne architectuur.",
+      "p2": "Dankzij onze eigen productie kunnen we een hoge en constante kwaliteit garanderen. We werken uitsluitend op maat en bieden geen standaardoplossingen aan. Elk project wordt tot in de kleinste details afgestemd op uw woning, zodat het resultaat perfect aansluit tot op de millimeter."
+    },
+    "values": {
+      "v1": {
+        "title": "Belgisch Design",
+        "description": "Ontworpen en geproduceerd in Limburg. Korte keten, maximale controle."
+      },
+      "v2": {
+        "title": "Duurzaamheid",
+        "description": "Aluminium is 100% recycleerbaar. Wij werken uitsluitend met verantwoorde materialen."
+      },
+      "v3": {
+        "title": "Transparantie",
+        "description": "Heldere afspraken, vaste prijzen en één aanspreekpunt tijdens uw hele project."
+      }
+    }
+  }
+}

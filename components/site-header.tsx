@@ -1,22 +1,22 @@
 "use client"
 
-import Link from "next/link"
+import { Link, usePathname } from "@/i18n/routing"
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
-
-const navLinks = [
-    { name: "Terrasoverkappingen", href: "/terrasoverkappingen" },
-    { name: "Carports", href: "/carports" },
-    { name: "Schuifwanden", href: "/schuifwanden" },
-    { name: "Gevelbekleding", href: "/gevelbekleding" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Over Ons", href: "/over-ons" },
-]
-
-import { usePathname } from "next/navigation"
+import { useTranslations } from "next-intl"
 
 export function SiteHeader() {
+    const t = useTranslations("Navbar")
     const pathname = usePathname()
+    
+    const navLinks = [
+        { name: t("terrasoverkappingen"), href: "/terrasoverkappingen" },
+        { name: t("carports"), href: "/carports" },
+        { name: t("schuifwanden"), href: "/schuifwanden" },
+        { name: t("gevelbekleding"), href: "/gevelbekleding" },
+        { name: t("portfolio"), href: "/portfolio" },
+        { name: t("overOns"), href: "/over-ons" },
+    ]
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isHero, setIsHero] = useState(true)
@@ -85,12 +85,12 @@ export function SiteHeader() {
                             className={`group relative px-6 py-2 border border-current overflow-hidden text-sm font-medium uppercase tracking-widest
                                 before:absolute before:inset-0 before:pointer-events-none
                                 before:[clip-path:circle(0%_at_50%_50%)] hover:before:[clip-path:circle(150%_at_50%_50%)]
-                                before:transition-[clip-path] before:duration-500 before:ease-[cubic-bezier(0.4,0,0.2,1)]
+                                before:transition-[clip-path] before:duration-500 before:ease-in-out
                                 ${useBlackHeader ? "before:bg-black hover:text-white hover:border-black" : "before:bg-white hover:text-black"}
                                 transition-colors duration-300
                             `}
                         >
-                            <span className="relative z-10">Contact</span>
+                            <span className="relative z-10">{t("contact")}</span>
                         </Link>
                     </nav>
 
@@ -126,7 +126,7 @@ export function SiteHeader() {
                             onClick={() => setIsMenuOpen(false)}
                             className="mt-8 text-xl text-white opacity-60 uppercase tracking-widest"
                         >
-                            Start een Project &rarr;
+                            {t("startProject")} &rarr;
                         </Link>
                     </nav>
                 </div>

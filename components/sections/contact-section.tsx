@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/ui/fade-in"
 import { sendEmail } from "@/actions/send-email"
 import ReCAPTCHA from "react-google-recaptcha"
 import { sendGAEvent } from '@next/third-parties/google'
+import { useTranslations, useLocale } from "next-intl"
 
 interface ActionState {
     success: boolean
@@ -29,6 +30,8 @@ const initialState: ActionState = {
 }
 
 export function ContactSection() {
+    const t = useTranslations("Contact")
+    const locale = useLocale()
     const [state, formAction, isPending] = useActionState(sendEmail, initialState)
 
     // Reset form after successful submission
@@ -54,15 +57,16 @@ export function ContactSection() {
                     <div>
                         <FadeIn delay={0.1}>
                             <span className="text-sm font-mono uppercase tracking-widest text-muted-foreground block mb-6">
-                                Contact
+                                {t("title")}
                             </span>
-                            <h2 className="text-5xl md:text-7xl font-medium tracking-tight mb-8 leading-[1]">
-                                Start een <br /> Project
-                            </h2>
+                            <h2 
+                                className="text-5xl md:text-7xl font-medium tracking-tight mb-8 leading-[1]"
+                                dangerouslySetInnerHTML={{ __html: t("heading") }}
+                            />
                         </FadeIn>
                         <FadeIn delay={0.3}>
                             <p className="text-xl text-muted-foreground max-w-md leading-relaxed">
-                                Heeft u een visie voor uw buitenruimte? Laat het ons weten. Wij vertalen uw ideeën naar aluminium realiteit.
+                                {t("subtitle")}
                             </p>
                         </FadeIn>
                     </div>
@@ -86,7 +90,7 @@ export function ContactSection() {
                             {/* Name Input */}
                             <div className="group">
                                 <label htmlFor="name" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
-                                    Uw Naam <span className="text-red-500">*</span>
+                                    {t("fields.name")} <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="text"
@@ -95,7 +99,7 @@ export function ContactSection() {
                                     required
                                     defaultValue={state?.inputs?.name || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
-                                    placeholder="John Doe"
+                                    placeholder={t("placeholders.name")}
                                 />
                                 {state?.errors?.name && (
                                     <p className="text-red-500 text-sm mt-2">{state.errors.name[0]}</p>
@@ -105,7 +109,7 @@ export function ContactSection() {
                             {/* Email Input */}
                             <div className="group">
                                 <label htmlFor="email" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
-                                    Email Adres <span className="text-red-500">*</span>
+                                    {t("fields.email")} <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="email"
@@ -114,7 +118,7 @@ export function ContactSection() {
                                     required
                                     defaultValue={state?.inputs?.email || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
-                                    placeholder="john@example.com"
+                                    placeholder={t("placeholders.email")}
                                 />
                                 {state?.errors?.email && (
                                     <p className="text-red-500 text-sm mt-2">{state.errors.email[0]}</p>
@@ -124,7 +128,7 @@ export function ContactSection() {
                             {/* Phone Number Input */}
                             <div className="group">
                                 <label htmlFor="phone" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
-                                    Telefoonnummer <span className="text-red-500">*</span>
+                                    {t("fields.phone")} <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="tel"
@@ -133,7 +137,7 @@ export function ContactSection() {
                                     required
                                     defaultValue={state?.inputs?.phone || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
-                                    placeholder="+32 123 45 67 89"
+                                    placeholder={t("placeholders.phone")}
                                 />
                                 {state?.errors?.phone && (
                                     <p className="text-red-500 text-sm mt-2">{state.errors.phone[0]}</p>
@@ -143,7 +147,7 @@ export function ContactSection() {
                             {/* Region Input */}
                             <div className="group">
                                 <label htmlFor="regio" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
-                                    Regio <span className="text-red-500">*</span>
+                                    {t("fields.regio")} <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="text"
@@ -152,7 +156,7 @@ export function ContactSection() {
                                     required
                                     defaultValue={state?.inputs?.regio || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
-                                    placeholder="Limburg, Antwerpen, Brussel..."
+                                    placeholder={t("placeholders.regio")}
                                 />
                                 {state?.errors?.regio && (
                                     <p className="text-red-500 text-sm mt-2">{state.errors.regio[0]}</p>
@@ -162,7 +166,7 @@ export function ContactSection() {
                             {/* BTW Number Input (Optional) */}
                             <div className="group">
                                 <label htmlFor="btwNumber" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
-                                    BTW Nummer <span className="opacity-50 font-normal">(Optioneel)</span>
+                                    {t("fields.btw")} <span className="opacity-50 font-normal">{t("fields.optional")}</span>
                                 </label>
                                 <input
                                     type="text"
@@ -170,14 +174,14 @@ export function ContactSection() {
                                     name="btwNumber"
                                     defaultValue={state?.inputs?.btwNumber || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20"
-                                    placeholder="BE 0123.456.789"
+                                    placeholder={t("placeholders.btw")}
                                 />
                             </div>
 
                             {/* Message Input */}
                             <div className="group mb-2">
                                 <label htmlFor="message" className="block text-sm font-medium mb-2 opacity-60 group-focus-within:opacity-100 transition-opacity">
-                                    Uw Bericht <span className="text-red-500">*</span>
+                                    {t("fields.message")} <span className="text-red-500">*</span>
                                 </label>
                                 <textarea
                                     id="message"
@@ -186,7 +190,7 @@ export function ContactSection() {
                                     rows={3}
                                     defaultValue={state?.inputs?.message || ""}
                                     className="w-full bg-transparent border-b border-black/20 py-4 text-2xl font-light focus:outline-none focus:border-black transition-colors rounded-none placeholder:text-black/20 resize-none"
-                                    placeholder="Vertel ons over uw project..."
+                                    placeholder={t("placeholders.message")}
                                 />
                                 {state?.errors?.message && (
                                     <p className="text-red-500 text-sm mt-2">{state.errors.message[0]}</p>
@@ -199,7 +203,7 @@ export function ContactSection() {
                                 <div className="group mb-2 sm:mb-0">
                                     <ReCAPTCHA
                                         sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-                                        hl="nl"
+                                        hl={locale}
                                     />
                                     {state?.errors?.['g-recaptcha-response'] && (
                                         <p className="text-red-500 text-sm mt-2">{state.errors['g-recaptcha-response'][0]}</p>
@@ -212,7 +216,7 @@ export function ContactSection() {
                                     disabled={isPending}
                                     className="group flex items-center gap-4 text-lg font-medium hover:opacity-70 transition-opacity disabled:opacity-50"
                                 >
-                                    {isPending ? "Verzenden..." : "Verstuur Aanvraag"}
+                                    {isPending ? t("buttons.sending") : t("buttons.submit")}
                                     <span className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                         <ArrowRight className="w-5 h-5" />
                                     </span>

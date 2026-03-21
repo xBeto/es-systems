@@ -1,42 +1,46 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import { ArrowRight } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
-
-const services = [
-    {
-        title: "Terrasoverkappingen",
-        description: "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken.",
-        href: "/terrasoverkappingen"
-    },
-    {
-        title: "Carports",
-        description: "Functionele esthetiek voor uw wagenpark. Vrijstaand of aanbouw, altijd in harmonie met de omgeving.",
-        href: "/carports"
-    },
-    {
-        title: "Glazen Schuifwanden",
-        description: "Maximale transparantie, maximaal comfort. Creëer een tuinkamer zonder visuele barrières.",
-        href: "/schuifwanden"
-    },
-    {
-        title: "Aluminium Gevelbekleding",
-        description: "Architecturale bescherming die de grenzen van uw woning verlegt. Strakke lijnen, geïntegreerde technieken.",
-        href: "/gevelbekleding"
-    },
-]
+import { useTranslations } from "next-intl"
 
 export function ServicesSection() {
+    const t = useTranslations("Services")
+
+    const services = [
+        {
+            title: t("items.t1"),
+            description: t("items.d1"),
+            href: "/terrasoverkappingen"
+        },
+        {
+            title: t("items.t2"),
+            description: t("items.d2"),
+            href: "/carports"
+        },
+        {
+            title: t("items.t3"),
+            description: t("items.d3"),
+            href: "/schuifwanden"
+        },
+        {
+            title: t("items.t4"),
+            description: t("items.d4"),
+            href: "/gevelbekleding"
+        },
+    ]
+
     return (
         <section className="py-32 bg-background text-foreground overflow-hidden">
             <div className="container mx-auto px-6 md:px-12 max-w-[1400px]">
                 <div className="md:mb-24 flex flex-col md:flex-row md:items-end justify-between md:border-b md:border-black/10 pb-8">
-                    <h2 className="text-4xl md:text-6xl font-medium tracking-tight max-w-xl">
-                        Onze <br /> Expertise
-                    </h2>
+                    <h2 
+                        className="text-4xl md:text-6xl font-medium tracking-tight max-w-xl" 
+                        dangerouslySetInnerHTML={{ __html: t("title") }}
+                    />
                     <p className="text-lg text-muted-foreground max-w-sm mt-8 md:mt-0">
-                        Wij creëren op maat gemaakte oplossingen die functionaliteit en design naadloos integreren.
+                        {t("subtitle")}
                     </p>
                 </div>
 
@@ -60,7 +64,7 @@ export function ServicesSection() {
                                         {/* Arrow / Action */}
                                         <div className="flex items-center gap-4 shrink-0 md:ml-auto md:order-last mr-4">
                                             <span className="hidden lg:block text-xs uppercase tracking-widest text-muted-foreground group-hover:text-black transition-colors">
-                                                Bekijk
+                                                {t("view")}
                                             </span>
                                             <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-300 transform group-hover:scale-110">
                                                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />

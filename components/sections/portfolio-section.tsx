@@ -1,51 +1,54 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import { ArrowUpRight } from "lucide-react"
 import { ScrollRevealImage } from "@/components/ui/scroll-reveal-image"
 import { FadeIn } from "@/components/ui/fade-in"
-
-const projects = [
-    {
-        category: "Terrasoverkapping",
-        image: "terrasoverkapping-1.jpg",
-        className: "md:col-span-8 aspect-[16/9]"
-    },
-    {
-        category: "Carport",
-        image: "carport-1.jpeg",
-        className: "md:col-span-4 aspect-[4/5]"
-    },
-    {
-        category: "Schuifwanden",
-        image: "glazenschuifwand-2.jpg",
-        className: "md:col-span-4 aspect-[4/5] md:mt-[-50px]"
-    },
-    {
-        category: "Gevelbekleding",
-        image: "gevelbekleding-3.webp",
-        className: "md:col-span-8 aspect-[16/9]"
-    }
-]
+import { useTranslations } from "next-intl"
 
 export function PortfolioSection() {
+    const t = useTranslations("Portfolio")
+
+    const projects = [
+        {
+            category: t("categories.t1"),
+            image: "terrasoverkapping-1.jpg",
+            className: "md:col-span-8 aspect-[16/9]"
+        },
+        {
+            category: t("categories.t2"),
+            image: "carport-1.jpeg",
+            className: "md:col-span-4 aspect-[4/5]"
+        },
+        {
+            category: t("categories.t3"),
+            image: "glazenschuifwand-2.jpg",
+            className: "md:col-span-4 aspect-[4/5] md:mt-[-50px]"
+        },
+        {
+            category: t("categories.t4"),
+            image: "gevelbekleding-3.webp",
+            className: "md:col-span-8 aspect-[16/9]"
+        }
+    ]
+
     return (
         <section className="py-32 bg-[#121212] text-white">
             <div className="container mx-auto px-6 md:px-12 max-w-[1920px]">
                 <div className="flex justify-between items-end mb-24 border-b border-white/10 pb-8">
                     <div>
                         <span className="text-sm font-mono uppercase tracking-widest text-white/50 block mb-4">
-                            Geselecteerde Projecten
+                            {t("selectedProjects")}
                         </span>
                         <h2 className="text-4xl md:text-6xl font-medium tracking-tight">
-                            Portfolio
+                            {t("title")}
                         </h2>
                     </div>
                     <Link
                         href="/portfolio"
                         className="hidden md:flex items-center gap-2 border-b border-white pb-1 hover:opacity-70 transition-opacity"
                     >
-                        Bekijk Archief <ArrowUpRight className="w-4 h-4" />
+                        {t("viewArchive")} <ArrowUpRight className="w-4 h-4" />
                     </Link>
                 </div>
 
@@ -80,7 +83,7 @@ export function PortfolioSection() {
                         href="/portfolio"
                         className="inline-block border border-white/30 px-8 py-3 uppercase tracking-widest text-sm"
                     >
-                        Bekijk Alle Projecten
+                        {t("viewAll")}
                     </Link>
                 </div>
             </div>

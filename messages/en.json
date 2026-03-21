@@ -1,0 +1,237 @@
+{
+  "Metadata": {
+    "title": "ES Systems | Outdoor Living Defined",
+    "description": "We design architectural aluminum structures that blur the boundary between indoor and outdoor spaces."
+  },
+  "Navbar": {
+    "terrasoverkappingen": "Patio Covers",
+    "carports": "Carports",
+    "schuifwanden": "Sliding Walls",
+    "gevelbekleding": "Cladding",
+    "portfolio": "Portfolio",
+    "overOns": "About Us",
+    "contact": "Contact",
+    "startProject": "Start a Project"
+  },
+  "Footer": {
+    "readyToStart": "Ready to start your dream project?",
+    "contactText": "Contact us for a no-obligation consultation. We are happy to think along with you from design to realization.",
+    "requestQuote": "Request a Quote",
+    "menu": "Menu",
+    "products": "Products",
+    "headquarters": "Headquarters",
+    "socials": "Socials",
+    "home": "Home",
+    "aboutUs": "About Us",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "terrasoverkappingen": "Patio Covers",
+    "carports": "Carports",
+    "schuifwanden": "Glass Sliding Walls",
+    "gevelbekleding": "Aluminum Cladding",
+    "allRightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "deliveryTerms": "Sales and Delivery Terms"
+  },
+  "Hero": {
+    "title1": "Outdoor Living",
+    "title2": "Defined",
+    "subtitle": "We design architectural aluminum structures that blur the boundary between indoor and outdoor spaces.",
+    "viewProjects": "View Projects"
+  },
+  "Services": {
+    "title": "Our <br /> Expertise",
+    "subtitle": "We create custom-made solutions that seamlessly integrate functionality and design.",
+    "view": "View",
+    "items": {
+      "t1": "Patio Covers",
+      "d1": "Architectural protection that expands the boundaries of your home. Clean lines, integrated techniques.",
+      "t2": "Carports",
+      "d2": "Functional aesthetics for your vehicles. Freestanding or attached, always in harmony with the environment.",
+      "t3": "Glass Sliding Walls",
+      "d3": "Maximum transparency, maximum comfort. Create a garden room without visual barriers.",
+      "t4": "Aluminum Cladding",
+      "d4": "Architectural protection that expands the boundaries of your home. Clean lines, integrated techniques."
+    }
+  },
+  "Portfolio": {
+    "selectedProjects": "Selected Projects",
+    "title": "Portfolio",
+    "viewArchive": "View Archive",
+    "viewAll": "View All Projects",
+    "categories": {
+      "t1": "Patio Cover",
+      "t2": "Carport",
+      "t3": "Sliding Walls",
+      "t4": "Cladding"
+    }
+  },
+  "WhyChooseUs": {
+    "title": "Why choose <br /> ES Systems?",
+    "subtitle": "We believe in the power of simplicity and quality. No empty promises, but tangible craftsmanship that lasts for generations.",
+    "features": {
+      "f1": "In-house manufacturing & installation",
+      "f2": "100% aluminum",
+      "f3": "Custom solutions",
+      "f4": "10+ years warranty",
+      "f5": "Fast delivery",
+      "f6": "Personal service"
+    },
+    "stats": {
+      "s1": "Customer Satisfaction",
+      "s2": "Years of Experience"
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "heading": "Start a <br /> Project",
+    "subtitle": "Do you have a vision for your outdoor space? Let us know. We translate your ideas into aluminum reality.",
+    "fields": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "regio": "Region",
+      "btw": "VAT Number",
+      "optional": "(Optional)",
+      "message": "Your Message"
+    },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "phone": "+32 123 45 67 89",
+      "regio": "Limburg, Antwerp, Brussels...",
+      "btw": "BE 0123.456.789",
+      "message": "Tell us about your project..."
+    },
+    "buttons": {
+      "submit": "Send Request",
+      "sending": "Sending..."
+    }
+  },
+  "Terrasoverkappingen": {
+    "specs": {
+      "material": "100% Aluminum",
+      "roofing": "Glass / Polycarbonate",
+      "span": "Up to 5/6 meters (cantilevered)",
+      "warranty": "10 Years"
+    },
+    "labels": {
+      "material": "Material",
+      "roofing": "Roofing",
+      "span": "Span",
+      "warranty": "Warranty"
+    },
+    "hero": {
+      "title": "Patio <br /> Covers",
+      "description": "Extend your living space. Architectural protection against sun, rain, and wind, without compromise."
+    },
+    "details": {
+      "specsTitle": "Specifications",
+      "contentTitle": "Design Philosophy",
+      "p1": "Our patio covers are designed with one goal: seamlessly integrating indoor and outdoor living. We shun unnecessary ornaments and opt for clean lines that respect and enhance the architecture of your home.",
+      "p2": "Thanks to our innovative modular system, we can fully personalize every cover. Integrated LED lighting, invisible water drainage, and optional glass sliding walls complete the picture."
+    },
+    "galleryTitle": "Realizations"
+  },
+  "Carports": {
+    "specs": {
+      "construction": "Freestanding or Attached",
+      "roofType": "Curved",
+      "finish": "Powder coating (all RAL)",
+      "extras": "LED"
+    },
+    "labels": {
+      "construction": "Construction",
+      "roofType": "Roof Type",
+      "finish": "Finish",
+      "extras": "Extras"
+    },
+    "hero": {
+      "title": "Aluminum <br /> Carports",
+      "description": "Premium protection for your vehicle. Sleek design that seamlessly blends with modern architecture."
+    },
+    "details": {
+      "specsTitle": "Specifications",
+      "contentTitle": "Functional Aesthetics",
+      "p1": "A carport is more than purely functional; it is a prominent part of your facade. Our aluminum carports combine a light, open structure with robust weather resistance.",
+      "p2": "We custom-design each carport to fit your home and vehicles. From compact single carports to spacious double setups with integrated storage for bicycles or garden tools. Perfectly prepared for the future with options for EV charging stations and solar panels."
+    },
+    "galleryTitle": "Realizations"
+  },
+  "Schuifwanden": {
+    "specs": {
+      "thickness": "10mm Tempered",
+      "system": "Bottom-running track system",
+      "profiles": "Ultra-slim aluminum",
+      "options": "Handles, Draught brushes"
+    },
+    "labels": {
+      "thickness": "Glass Thickness",
+      "system": "System",
+      "profiles": "Profiles",
+      "options": "Options"
+    },
+    "hero": {
+      "title": "Glass <br /> Sliding Walls",
+      "description": "Blur the boundary between indoors and outdoors. Protection from wind and rain while maintaining maximum views."
+    },
+    "details": {
+      "specsTitle": "Specifications",
+      "contentTitle": "Comfort in Every Season",
+      "p1": "Transform your patio cover into a fully-fledged garden room. Our glass sliding walls offer protection against the elements without losing the open character of your garden.",
+      "p2": "Thanks to the smooth-running track system, you can slide the panels open or closed effortlessly. The panels feature polished safety glass for maximum clarity and safety. With optional carriers, you can open the entire wall in one fluid motion."
+    },
+    "galleryTitle": "Realizations"
+  },
+  "Gevelbekleding": {
+    "specs": {
+      "material": "High-quality Aluminum",
+      "finish": "Powder coating (All RAL)",
+      "mounting": "Invisible mounting",
+      "durability": "Low maintenance & Weather resistant"
+    },
+    "labels": {
+      "material": "Material",
+      "finish": "Finish",
+      "mounting": "Mounting",
+      "durability": "Durability"
+    },
+    "hero": {
+      "title": "Aluminum <br /> Cladding",
+      "description": "Give your home a unique look. Clean lines, durable materials, and a perfect finish for a modern appearance."
+    },
+    "details": {
+      "specsTitle": "Specifications",
+      "contentTitle": "Aesthetics & Functionality",
+      "p1": "Our aluminum cladding combines architectural beauty with technical perfection. The system not only provides a visual upgrade for your home but also ensures long-lasting protection for your facade.",
+      "p2": "Thanks to the invisible mounting and the ability to integrate insulation, this is the ideal solution for both renovation and new construction. Choose from a wide range of profiles and colors to make your personal mark."
+    },
+    "galleryTitle": "Realizations"
+  },
+  "OverOns": {
+    "hero": {
+      "label": "About the workshop",
+      "title": "Craftsmanship <br /> in Aluminum"
+    },
+    "story": {
+      "quote": "We believe that an outdoor space is not an afterthought, but an essential part of your living environment.",
+      "p1": "ES Systems has been active since 2018 with a clear mission: to create custom aluminum solutions that are technically perfect and simultaneously offer aesthetic added value to modern architecture.",
+      "p2": "Thanks to our in-house production, we can guarantee high and consistent quality. We work exclusively custom-made and do not offer standard solutions. Every project is tailored down to the smallest details for your home, ensuring the result fits perfectly to the millimeter."
+    },
+    "values": {
+      "v1": {
+        "title": "Belgian Design",
+        "description": "Designed and produced in Limburg. Short supply chain, maximum control."
+      },
+      "v2": {
+        "title": "Sustainability",
+        "description": "Aluminum is 100% recyclable. We work exclusively with responsible materials."
+      },
+      "v3": {
+        "title": "Transparency",
+        "description": "Clear agreements, fixed prices, and a single point of contact throughout your entire project."
+      }
+    }
+  }
+}

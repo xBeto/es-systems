@@ -1,12 +1,6 @@
-import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-    title: 'Algemene Voorwaarden | ES Systems',
-    description: 'Algemene verkoopsvoorwaarden van ES Systems.',
-};
-
-export default function TermsPage() {
+export function TermsNL() {
     return (
         <div className="container mx-auto px-6 md:px-12 py-24 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-8">Algemene Voorwaarden</h1>

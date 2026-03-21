@@ -1,12 +1,14 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import { ArrowDown } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
+import { useTranslations } from "next-intl"
 
 export function HeroSection() {
+    const t = useTranslations("Hero")
     const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
@@ -34,24 +36,24 @@ export function HeroSection() {
                 <FadeIn delay={0.2} className="max-w-[90vw]">
                     <h1 className="text-[#121212] mb-8">
                         <span className="block text-[12vw] leading-[0.8] font-light tracking-tighter">
-                            Buitenleven
+                            {t("title1")}
                         </span>
                         <span className="block text-[12vw] leading-[0.8] font-bold tracking-tighter ml-[10vw]">
-                            Gedefinieerd
+                            {t("title2")}
                         </span>
                     </h1>
                 </FadeIn>
 
                 <FadeIn delay={0.4} className="flex flex-col md:flex-row items-start md:items-end justify-between mt-12">
                     <p className="max-w-md text-[#121212] text-lg md:text-xl font-medium leading-relaxed">
-                        Wij ontwerpen architecturale aluminium constructies die de grens tussen binnen en buiten doen vervagen.
+                        {t("subtitle")}
                     </p>
 
                     <Link
                         href="/portfolio"
                         className="group mt-8 md:mt-0 flex items-center gap-4 text-[#121212] hover:opacity-70 transition-opacity"
                     >
-                        <span className="uppercase tracking-widest text-sm font-bold">Bekijk Projecten</span>
+                        <span className="uppercase tracking-widest text-sm font-bold">{t("viewProjects")}</span>
                         <div className="w-12 h-12 border border-[#121212] rounded-full flex items-center justify-center group-hover:bg-[#121212] group-hover:text-white transition-all duration-300">
                             <span className="block w-2 h-2 bg-current rounded-full" />
                         </div>

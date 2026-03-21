@@ -3,13 +3,7 @@
 import { PageWrapper } from "@/components/layout"
 import { ProductHero, ProductHeroImage, ProductDetails, ImageGallery } from "@/components/product"
 import { ContactSection } from "@/components/sections/contact-section"
-
-const specs = [
-    { label: "Materiaal", value: "100% Aluminium" },
-    { label: "Dakbedekking", value: "Glas / Polycarbonaat" },
-    { label: "Overspanning", value: "Tot 5/6 meter (vrijdragend)" },
-    { label: "Garantie", value: "10 Jaar" },
-]
+import { useTranslations } from "next-intl"
 
 const galleryImages = [
     { src: "terrasoverkapping-1.jpg", alt: "Terrasoverkapping project 1" },
@@ -18,11 +12,20 @@ const galleryImages = [
 ]
 
 export default function TerrasoverkappingenPage() {
+    const t = useTranslations("Terrasoverkappingen")
+
+    const specs = [
+        { label: t("labels.material"), value: t("specs.material") },
+        { label: t("labels.roofing"), value: t("specs.roofing") },
+        { label: t("labels.span"), value: t("specs.span") },
+        { label: t("labels.warranty"), value: t("specs.warranty") },
+    ]
+
     return (
         <PageWrapper>
             <ProductHero
-                title={<>Terras <br /> Overkappingen</>}
-                description="Verleng uw leefruimte. Architecturale bescherming tegen zon, regen en wind, zonder compromissen."
+                title={<span dangerouslySetInnerHTML={{ __html: t("hero.title") }} />}
+                description={t("hero.description")}
             />
 
             <ProductHeroImage
@@ -31,25 +34,23 @@ export default function TerrasoverkappingenPage() {
             />
 
             <ProductDetails
-                specsTitle="Eigenschappen"
+                specsTitle={t("details.specsTitle")}
                 specs={specs}
-                contentTitle="Design Filosofie"
+                contentTitle={t("details.contentTitle")}
                 content={
                     <>
                         <p className="mb-6">
-                            Onze terrasoverkappingen zijn ontworpen met één doel: het naadloos integreren van binnen- en buitenleven.
-                            We schuwen onnodige ornamenten en kiezen voor strakke lijnen die de architectuur van uw woning respecteren en versterken.
+                            {t("details.p1")}
                         </p>
                         <p>
-                            Dankzij ons innovatieve modulaire systeem kunnen we elke overkapping volledig personaliseren.
-                            Geïntegreerde LED-verlichting, onzichtbare waterafvoer en optionele glazen schuifwanden maken het plaatje compleet.
+                            {t("details.p2")}
                         </p>
                     </>
                 }
             />
 
             <ImageGallery
-                title="Realisaties"
+                title={t("galleryTitle")}
                 images={galleryImages}
                 layout="asymmetric-2col"
             />

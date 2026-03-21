@@ -3,13 +3,7 @@
 import { PageWrapper } from "@/components/layout"
 import { ProductHero, ProductHeroImage, ProductDetails, ImageGallery } from "@/components/product"
 import { ContactSection } from "@/components/sections/contact-section"
-
-const specs = [
-    { label: "Glasdikte", value: "10mm Gehard" },
-    { label: "Systeem", value: "Onderlopend railsysteem" },
-    { label: "Profielen", value: "Ultra-slank aluminium" },
-    { label: "Opties", value: "Handgrepen, Tochtborstels" },
-]
+import { useTranslations } from "next-intl"
 
 const galleryImages = [
     { src: "glazenschuifwand-1.jpg", alt: "Schuifwanden project 1" },
@@ -18,11 +12,20 @@ const galleryImages = [
 ]
 
 export default function SchuifwandenPage() {
+    const t = useTranslations("Schuifwanden")
+    
+    const specs = [
+        { label: t("labels.thickness"), value: t("specs.thickness") },
+        { label: t("labels.system"), value: t("specs.system") },
+        { label: t("labels.profiles"), value: t("specs.profiles") },
+        { label: t("labels.options"), value: t("specs.options") },
+    ]
+
     return (
         <PageWrapper>
             <ProductHero
-                title={<>Glazen <br /> Schuifwanden</>}
-                description="Vervaag de grens tussen binnen en buiten. Beschutting tegen wind en regen met behoud van maximaal uitzicht."
+                title={<span dangerouslySetInnerHTML={{ __html: t("hero.title") }} />}
+                description={t("hero.description")}
             />
 
             <ProductHeroImage
@@ -31,26 +34,23 @@ export default function SchuifwandenPage() {
             />
 
             <ProductDetails
-                specsTitle="Eigenschappen"
+                specsTitle={t("details.specsTitle")}
                 specs={specs}
-                contentTitle="Comfort in Elk Seizoen"
+                contentTitle={t("details.contentTitle")}
                 content={
                     <>
                         <p className="mb-6">
-                            Transformeer uw terrasoverkapping tot een volwaardige tuinkamer. Onze glazen schuifwanden
-                            bieden bescherming tegen de elementen zonder het open karakter van uw tuin te verliezen.
+                            {t("details.p1")}
                         </p>
                         <p>
-                            Dankzij het soepel lopende railsysteem schuift u de panelen moeiteloos open of dicht.
-                            De panelen zijn voorzien van gepolijst veiligheidsglas voor maximale helderheid en veiligheid.
-                            Met optionele meenemers opent u de volledige wand in één vloeiende beweging.
+                            {t("details.p2")}
                         </p>
                     </>
                 }
             />
 
             <ImageGallery
-                title="Realisaties"
+                title={t("galleryTitle")}
                 images={galleryImages}
                 layout="mix-60-40"
             />

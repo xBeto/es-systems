@@ -1,0 +1,237 @@
+{
+  "Metadata": {
+    "title": "ES Systems | Leben im Freien neu definiert",
+    "description": "Wir entwerfen architektonische Aluminiumkonstruktionen, die die Grenze zwischen drinnen und draußen verwischen."
+  },
+  "Navbar": {
+    "terrasoverkappingen": "Überdachungen",
+    "carports": "Carports",
+    "schuifwanden": "Schiebewände",
+    "gevelbekleding": "Fassaden",
+    "portfolio": "Projekte",
+    "overOns": "Über Uns",
+    "contact": "Kontakt",
+    "startProject": "Projekt Starten"
+  },
+  "Footer": {
+    "readyToStart": "Bereit, Ihr Traumprojekt zu starten?",
+    "contactText": "Kontaktieren Sie uns für ein unverbindliches Gespräch. Wir begleiten Sie gerne vom Entwurf bis zur Realisierung.",
+    "requestQuote": "Angebot anfordern",
+    "menu": "Menü",
+    "products": "Produkte",
+    "headquarters": "Hauptsitz",
+    "socials": "Soziales",
+    "home": "Startseite",
+    "aboutUs": "Über uns",
+    "portfolio": "Projekte",
+    "contact": "Kontakt",
+    "terrasoverkappingen": "Überdachungen",
+    "carports": "Carports",
+    "schuifwanden": "Glasschiebewände",
+    "gevelbekleding": "Aluminiumfassaden",
+    "allRightsReserved": "Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutz",
+    "terms": "AGB",
+    "deliveryTerms": "Verkaufs- und Lieferbedingungen"
+  },
+  "Hero": {
+    "title1": "Leben im Freien",
+    "title2": "Neu definiert",
+    "subtitle": "Wir entwerfen architektonische Aluminiumkonstruktionen, die die Grenze zwischen drinnen und draußen verwischen.",
+    "viewProjects": "Projekte ansehen"
+  },
+  "Services": {
+    "title": "Unsere <br /> Expertise",
+    "subtitle": "Wir schaffen maßgeschneiderte Lösungen, die Funktionalität und Design nahtlos integrieren.",
+    "view": "Ansehen",
+    "items": {
+      "t1": "Überdachungen",
+      "d1": "Architektonischer Schutz, der die Grenzen Ihres Hauses erweitert. Klare Linien, integrierte Technik.",
+      "t2": "Carports",
+      "d2": "Funktionale Ästhetik für Ihren Fuhrpark. Freistehend oder angebaut, immer im Einklang mit der Umgebung.",
+      "t3": "Glasschiebewände",
+      "d3": "Maximale Transparenz, maximaler Komfort. Schaffen Sie ein Gartenzimmer ohne visuelle Barrieren.",
+      "t4": "Aluminiumfassaden",
+      "d4": "Architektonischer Schutz, der die Grenzen Ihres Hauses erweitert. Klare Linien, integrierte Technik."
+    }
+  },
+  "Portfolio": {
+    "selectedProjects": "Ausgewählte Projekte",
+    "title": "Portfolio",
+    "viewArchive": "Archiv Ansehen",
+    "viewAll": "Alle Projekte Ansehen",
+    "categories": {
+      "t1": "Überdachung",
+      "t2": "Carport",
+      "t3": "Schiebewände",
+      "t4": "Fassade"
+    }
+  },
+  "WhyChooseUs": {
+    "title": "Warum Sie sich für <br /> ES Systems entscheiden sollten?",
+    "subtitle": "Wir glauben an die Kraft von Einfachheit und Qualität. Keine leeren Versprechungen, sondern spürbare Handwerkskunst, die Generationen überdauert.",
+    "features": {
+      "f1": "Eigene Herstellung & Montage",
+      "f2": "100% Aluminium",
+      "f3": "Maßgeschneiderte Lösungen",
+      "f4": "10+ Jahre Garantie",
+      "f5": "Schnelle Lieferung",
+      "f6": "Persönlicher Service"
+    },
+    "stats": {
+      "s1": "Kundenzufriedenheit",
+      "s2": "Jahre Erfahrung"
+    }
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "heading": "Projekt <br /> Starten",
+    "subtitle": "Haben Sie eine Vision für Ihren Außenbereich? Lassen Sie es uns wissen. Wir übersetzen Ihre Ideen in Aluminium-Realität.",
+    "fields": {
+      "name": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "regio": "Region",
+      "btw": "MwSt.-Nummer",
+      "optional": "(Optional)",
+      "message": "Ihre Nachricht"
+    },
+    "placeholders": {
+      "name": "Max Mustermann",
+      "email": "max@beispiel.de",
+      "phone": "+49 123 45 67 89",
+      "regio": "Berlin, Bayern...",
+      "btw": "DE 0123.456.789",
+      "message": "Erzählen Sie uns von Ihrem Projekt..."
+    },
+    "buttons": {
+      "submit": "Anfrage Senden",
+      "sending": "Senden..."
+    }
+  },
+  "Terrasoverkappingen": {
+    "specs": {
+      "material": "100% Aluminium",
+      "roofing": "Glas / Polycarbonat",
+      "span": "Bis 5/6 Meter (freitragend)",
+      "warranty": "10 Jahre"
+    },
+    "labels": {
+      "material": "Material",
+      "roofing": "Dacheindeckung",
+      "span": "Spannweite",
+      "warranty": "Garantie"
+    },
+    "hero": {
+      "title": "Überdachungen",
+      "description": "Erweitern Sie Ihren Wohnraum. Architektonischer Schutz vor Sonne, Regen und Wind, ohne Kompromisse."
+    },
+    "details": {
+      "specsTitle": "Spezifikationen",
+      "contentTitle": "Design-Philosophie",
+      "p1": "Unsere Terrassenüberdachungen wurden mit einem Ziel entworfen: das nahtlose Verschmelzen von Wohnen drinnen und draußen. Wir meiden unnötige Ornamente und entscheiden uns für klare Linien, die die Architektur Ihres Hauses respektieren und verstärken.",
+      "p2": "Dank unseres innovativen modularen Systems können wir jede Überdachung vollständig personalisieren. Integrierte LED-Beleuchtung, unsichtbare Entwässerung und optionale Glasschiebewände vervollständigen das Bild."
+    },
+    "galleryTitle": "Projekte"
+  },
+  "Carports": {
+    "specs": {
+      "construction": "Freistehend oder Anbau",
+      "roofType": "Gewölbt",
+      "finish": "Pulverbeschichtung (alle RAL)",
+      "extras": "LED"
+    },
+    "labels": {
+      "construction": "Konstruktion",
+      "roofType": "Dachtyp",
+      "finish": "Oberfläche",
+      "extras": "Extras"
+    },
+    "hero": {
+      "title": "Aluminium <br /> Carports",
+      "description": "Premium-Schutz für Ihr Fahrzeug. Schlichtes Design, das sich nahtlos in moderne Architektur einfügt."
+    },
+    "details": {
+      "specsTitle": "Eigenschaften",
+      "contentTitle": "Funktionale Ästhetik",
+      "p1": "Ein Carport ist mehr als nur funktional; es ist ein markanter Teil Ihres Fassadenbildes. Unsere Aluminium-Carports verbinden eine leichte, offene Struktur mit robuster Wetterbeständigkeit.",
+      "p2": "Wir entwerfen jedes Carport maßgeschneidert nach Maß Ihres Hauses und Fuhrparks. Von kompakten Einzelcarports bis hin zu geräumigen Doppelaufbauten mit integriertem Abstellraum für Fahrräder oder Gartengeräte. Perfekt auf die Zukunft vorbereitet mit Optionen für EV-Ladestationen und Solarmodule."
+    },
+    "galleryTitle": "Projekte"
+  },
+  "Schuifwanden": {
+    "specs": {
+      "thickness": "10mm Gehärtet",
+      "system": "Bodenlaufendes Schienensystem",
+      "profiles": "Ultra-schlankes Aluminium",
+      "options": "Griffe, Zugluftbürsten"
+    },
+    "labels": {
+      "thickness": "Glasdicke",
+      "system": "System",
+      "profiles": "Profile",
+      "options": "Optionen"
+    },
+    "hero": {
+      "title": "Glas- <br /> Schiebewände",
+      "description": "Verwischen Sie die Grenze zwischen drinnen und draußen. Schutz vor Wind und Regen bei maximaler Aussicht."
+    },
+    "details": {
+      "specsTitle": "Eigenschaften",
+      "contentTitle": "Komfort zu jeder Jahreszeit",
+      "p1": "Verwandeln Sie Ihre Terrassenüberdachung in ein vollwertiges Gartenzimmer. Unsere Glasschiebewände bieten Schutz vor den Elementen, ohne den offenen Charakter Ihres Gartens zu verlieren.",
+      "p2": "Dank des leichtgängigen Schienensystems können Sie die Paneele mühelos auf- oder zuschieben. Die Paneele sind mit poliertem Sicherheitsglas für maximale Klarheit und Sicherheit ausgestattet. Mit optionalen Mitnehmern öffnen Sie die gesamte Wand in einer fließenden Bewegung."
+    },
+    "galleryTitle": "Projekte"
+  },
+  "Gevelbekleding": {
+    "specs": {
+      "material": "Hochwertiges Aluminium",
+      "finish": "Pulverbeschichtung (Alle RAL)",
+      "mounting": "Unsichtbare Befestigung",
+      "durability": "Pflegeleicht & Wetterfest"
+    },
+    "labels": {
+      "material": "Material",
+      "finish": "Oberfläche",
+      "mounting": "Montage",
+      "durability": "Haltbarkeit"
+    },
+    "hero": {
+      "title": "Aluminium <br /> Fassaden",
+      "description": "Verleihen Sie Ihrem Haus einen einzigartigen Look. Klare Linien, langlebige Materialien und perfekte Verarbeitung für ein modernes Erscheinungsbild."
+    },
+    "details": {
+      "specsTitle": "Eigenschaften",
+      "contentTitle": "Ästhetik & Funktionalität",
+      "p1": "Unsere Aluminiumfassaden verbinden architektonische Schönheit mit technischer Perfektion. Das System bietet nicht nur eine optische Aufwertung Ihres Hauses, sondern gewährleistet auch einen dauerhaften Schutz Ihrer Fassade.",
+      "p2": "Dank der unsichtbaren Befestigung und der Möglichkeit, Isolierung zu integrieren, ist dies die ideale Lösung für Renovierung und Neubau. Wählen Sie aus einer Vielzahl von Profilen und Farben, um Ihren persönlichen Stempel aufzudrücken."
+    },
+    "galleryTitle": "Projekte"
+  },
+  "OverOns": {
+    "hero": {
+      "label": "Über das Atelier",
+      "title": "Handwerkskunst <br /> aus Aluminium"
+    },
+    "story": {
+      "quote": "Wir glauben, dass ein Außenbereich keine nachträgliche Ergänzung ist, sondern ein wesentlicher Bestandteil Ihres Lebensumfelds.",
+      "p1": "ES Systems ist seit 2018 mit einer klaren Mission aktiv: maßgeschneiderte Aluminiumlösungen zu realisieren, die technisch perfekt sind und moderner Architektur gleichzeitig einen ästhetischen Mehrwert bieten.",
+      "p2": "Dank unserer eigenen Produktion können wir eine hohe und konstante Qualität garantieren. Wir arbeiten ausschließlich auf Maß und bieten keine Standardlösungen an. Jedes Projekt wird bis ins kleinste Detail auf Ihr Zuhause abgestimmt, sodass das Ergebnis millimetergenau passt."
+    },
+    "values": {
+      "v1": {
+        "title": "Belgisches Design",
+        "description": "Entworfen und produziert in Limburg. Kurze Wege, maximale Kontrolle."
+      },
+      "v2": {
+        "title": "Nachhaltigkeit",
+        "description": "Aluminium ist zu 100% recycelbar. Wir arbeiten ausschließlich mit verantwortungsvollen Materialien."
+      },
+      "v3": {
+        "title": "Transparenz",
+        "description": "Klare Absprachen, feste Preise und ein Ansprechpartner für Ihr gesamtes Projekt."
+      }
+    }
+  }
+}
